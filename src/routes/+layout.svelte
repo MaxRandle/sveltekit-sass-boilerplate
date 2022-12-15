@@ -1,53 +1,16 @@
 <script>
-	import Header from './Header.svelte';
-	import './styles.css';
+  import '@styles/reset.scss';
+  import '@styles/tailwind.scss';
 </script>
 
-<div class="app">
-	<Header />
+<main class="pt-10 pb-20 min-h-screen overflow-hidden">
+  <slot />
+</main>
 
-	<main>
-		<slot />
-	</main>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
-</div>
-
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
+<style lang="scss">
+  main {
+    font-family: var(--font-family);
+    color: var(--text-color--base);
+    background: var(--surface-bg--base);
+  }
 </style>
