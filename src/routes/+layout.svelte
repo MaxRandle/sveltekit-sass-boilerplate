@@ -1,6 +1,7 @@
 <script>
   import '@styles/reset.scss';
   import '@styles/tailwind.scss';
+  import '@styles/theme.scss';
 </script>
 
 <main class="pt-10 pb-20 min-h-screen overflow-hidden">

@@ -11,7 +11,7 @@
 </section>
 
 <style lang="scss">
-  /* h1 {
+  h1 {
     color: $test-var;
-  } */
+  }
 </style>
