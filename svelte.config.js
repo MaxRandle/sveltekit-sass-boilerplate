@@ -10,7 +10,7 @@ const config = {
     autoprefixer: true,
     'postcss-preset-env': true,
     scss: {
-      prependData: "@use './src/styles/variables.scss' as *;"
+      prependData: "@use './src/styles/theme.scss' as *;"
     }
   }),
 

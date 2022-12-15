@@ -1,4 +1,5 @@
 <script>
+  import Palette from '@components/palette/Palette.svelte';
 </script>
 
 <svelte:head>
@@ -8,10 +9,8 @@
 
 <section>
   <h1>YoOoOooOOOOOza</h1>
+  <Palette class="mt-10" />
 </section>
 
 <style lang="scss">
-  h1 {
-    color: $test-var;
-  }
 </style>
