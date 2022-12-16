@@ -220,9 +220,9 @@ $shades: (
   /* ========================================================================= */
 
   --surface-bg--base: var(--base-50);
-  --surface-bg--raised: var(--base-100);
-  --surface-bg--raised2: var(--base-200);
-  --surface-bg--raised3: var(--base-300);
+  --surface-bg--base-raised: var(--base-100);
+  --surface-bg--base-raised2: var(--base-200);
+  --surface-bg--base-raised3: var(--base-300);
 
   --surface-bg--primary: var(--primary-50);
   --surface-bg--primary-raised: var(--primary-100);
@@ -234,9 +234,9 @@ $shades: (
 
   @include dark {
     --surface-bg--base: var(--base-900);
-    --surface-bg--raised: var(--base-800);
-    --surface-bg--raised2: var(--base-700);
-    --surface-bg--raised3: var(--base-600);
+    --surface-bg--base-raised: var(--base-800);
+    --surface-bg--base-raised2: var(--base-700);
+    --surface-bg--base-raised3: var(--base-600);
 
     --surface-bg--primary: var(--primary-900);
     --surface-bg--primary-raised: var(--primary-800);
