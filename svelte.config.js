@@ -19,7 +19,8 @@ const config = {
     alias: {
       '@styles': 'src/styles/*',
       '@components': 'src/components/*',
-      '@layouts': 'src/layouts/*'
+      '@layouts': 'src/layouts/*',
+      '@helpers': 'src/helpers/*'
     }
   }
 };
