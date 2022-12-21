@@ -10,14 +10,14 @@
    */
   export let color: 'base' | 'weak' | 'primary' | undefined = undefined;
 
-  const classes = {
+  const classes = cn({
     [`typography`]: true,
     [`typography--${level}`]: level,
     [`typography--${color}`]: color
-  };
+  });
 </script>
 
-<p class={cn(classes)}>
+<p class={classes}>
   <slot />
 </p>
 

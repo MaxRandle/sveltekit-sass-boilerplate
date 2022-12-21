@@ -1,4 +1,6 @@
 <script lang="ts">
+  import cn from 'classnames';
+
   /**
    * @summary the size of the heading. This property informs the DOM node type
    */
@@ -14,10 +16,18 @@
 
   const tag = as ?? level === 1 ? 'h1' : level === 2 ? 'h2' : 'h3';
 
-  const className = `${color ? `heading--${color}` : ''} ${level ? `heading--${level}` : ''}`;
+  let className: string | undefined = undefined;
+  export { className as class };
+
+  const classes = cn({
+    [`heading`]: true,
+    [`heading--${color}`]: color,
+    [`heading--${level}`]: level,
+    [className ?? '']: className
+  });
 </script>
 
-<svelte:element this={tag} class="heading {className}"><slot /></svelte:element>
+<svelte:element this={tag} class={classes}><slot /></svelte:element>
 
 <style lang="scss">
   .heading {

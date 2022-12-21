@@ -252,6 +252,7 @@ $shades: (
   /* ========================================================================= */
 
   --border-color--base: var(--base-400);
+  --border-color--primary: var(--primary-400);
   --border-color--danger: var(--danger-400);
   --border-color--warning: var(--warning-400);
   --border-color--info: var(--info-400);
@@ -259,11 +260,22 @@ $shades: (
 
   @include dark {
     --border-color--base: var(--base-400);
+    --border-color--primary: var(--primary-400);
     --border-color--danger: var(--danger-400);
     --border-color--warning: var(--warning-400);
     --border-color--info: var(--info-400);
     --border-color--success: var(--success-400);
   }
+
+  /* ========================================================================= */
+  /* button */
+  /* ========================================================================= */
+
+  --button-base-bg: var(--base-900);
+  --button-base-bg--hover: var(--base-800);
+
+  --button-primary-bg: var(--primary-700);
+  --button-primary-bg--hover: var(--primary-600);
 
   /* ========================================================================= */
   /* misc */
