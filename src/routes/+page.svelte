@@ -9,6 +9,7 @@
   import { formatNumberAsCurrency } from '@helpers/formatNumber';
   import Button from '@components/button/Button.svelte';
   import ButtonPrimary from '@components/button/ButtonPrimary.svelte';
+  import ButtonTailwind from '@components/button/ButtonTailwind.svelte';
 </script>
 
 <svelte:head>
@@ -55,6 +56,10 @@
       <CardSection class="pt-0">
         <Button>Withdraw</Button>
         <ButtonPrimary>Deposit</ButtonPrimary>
+
+        <ButtonTailwind>Withdraw</ButtonTailwind>
+        <ButtonTailwind palette="primary">Deposit</ButtonTailwind>
+        <ButtonTailwind palette="primary" disabled>Deposit</ButtonTailwind>
       </CardSection>
     </Card>
   </Container>
