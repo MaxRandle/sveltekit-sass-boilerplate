@@ -15,10 +15,10 @@
 
 <style lang="scss">
   button {
-    --button-color: /*        */ var(--color, inherit);
-    --button-bg: /*           */ var(--bg, var(--button-base-bg));
-    --button-bg--hover: /*    */ var(--bg--hover, var(--button-base-bg--hover));
-    --button-border-color: /* */ var(--border-color, var(--border-color--base));
+    --button-color: /*        */ var(--color, /*        */ inherit);
+    --button-bg: /*           */ var(--bg, /*           */ var(--button-base-bg));
+    --button-bg--hover: /*    */ var(--bg--hover, /*    */ var(--button-base-bg--hover));
+    --button-border-color: /* */ var(--border-color, /* */ var(--border-color--base));
 
     --button-border-radius: 0.5rem;
 
