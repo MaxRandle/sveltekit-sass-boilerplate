@@ -38,12 +38,12 @@
       color: var(--text-color--primary);
     }
 
-    $levels: ('sm', 'md', 'lg');
-
-    @each $level in $levels {
-      font-size: var(--typography-letter-spacing--#{$level});
-      line-height: var(--typography-letter-spacing--#{$level});
-      letter-spacing: var(--typography-letter-spacing--#{$level});
+    @each $level in ('sm', 'md', 'lg') {
+      &--#{$level} {
+        font-size: var(--typography-font-size--#{$level});
+        line-height: var(--typography-line-height--#{$level});
+        letter-spacing: var(--typography-letter-spacing--#{$level});
+      }
     }
   }
 </style>

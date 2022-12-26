@@ -16,15 +16,15 @@
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<Section palette="primary" isFirstSection>
+<Section>
   <Container class="space-y-4">
     <!-- <Heading color="primary" level={1}>YoOoOooOOOOOza</Heading> -->
     <!-- <Heading color="primary" level={2}>AyooooOoOo Asuuuuuuuuuuh</Heading> -->
     <!-- <Heading color="primary" level={3}>assuuuh duuud</Heading> -->
 
-    <Typography color="primary" level="lg">Okay bro.</Typography>
-    <Typography color="primary" level="md">Okay bro.</Typography>
-    <Typography color="primary" level="sm">Okay bro.</Typography>
+    <Typography color="weak" level="lg">Okay bro.</Typography>
+    <Typography color="weak" level="md">Okay bro.</Typography>
+    <Typography color="weak" level="sm">Okay bro.</Typography>
   </Container>
 </Section>
 

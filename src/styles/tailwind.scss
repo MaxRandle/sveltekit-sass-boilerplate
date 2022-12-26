@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  font-family: var(--font-family);
+  color: var(--text-color--base);
+  background: var(--surface-bg--base);
+}

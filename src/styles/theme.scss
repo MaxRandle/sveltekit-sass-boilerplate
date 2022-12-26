@@ -10,128 +10,128 @@
 /* ========================================================================= */
 
 :root {
-  --base-25: $slate-25;
-  --base-50: $slate-50;
-  --base-100: $slate-100;
-  --base-200: $slate-200;
-  --base-300: $slate-300;
-  --base-400: $slate-400;
-  --base-500: $slate-500;
-  --base-600: $slate-600;
-  --base-700: $slate-700;
-  --base-800: $slate-800;
-  --base-900: $slate-900;
+  --base-25: var(--slate-25);
+  --base-50: var(--slate-50);
+  --base-100: var(--slate-100);
+  --base-200: var(--slate-200);
+  --base-300: var(--slate-300);
+  --base-400: var(--slate-400);
+  --base-500: var(--slate-500);
+  --base-600: var(--slate-600);
+  --base-700: var(--slate-700);
+  --base-800: var(--slate-800);
+  --base-900: var(--slate-900);
 
-  --primary-25: $purple-25;
-  --primary-50: $purple-50;
-  --primary-100: $purple-100;
-  --primary-200: $purple-200;
-  --primary-300: $purple-300;
-  --primary-400: $purple-400;
-  --primary-500: $purple-500;
-  --primary-600: $purple-600;
-  --primary-700: $purple-700;
-  --primary-800: $purple-800;
-  --primary-900: $purple-900;
+  --primary-25: var(--purple-25);
+  --primary-50: var(--purple-50);
+  --primary-100: var(--purple-100);
+  --primary-200: var(--purple-200);
+  --primary-300: var(--purple-300);
+  --primary-400: var(--purple-400);
+  --primary-500: var(--purple-500);
+  --primary-600: var(--purple-600);
+  --primary-700: var(--purple-700);
+  --primary-800: var(--purple-800);
+  --primary-900: var(--purple-900);
 
-  --danger-25: $danger-25;
-  --danger-50: $danger-50;
-  --danger-100: $danger-100;
-  --danger-200: $danger-200;
-  --danger-300: $danger-300;
-  --danger-400: $danger-400;
-  --danger-500: $danger-500;
-  --danger-600: $danger-600;
-  --danger-700: $danger-700;
-  --danger-800: $danger-800;
-  --danger-900: $danger-900;
+  --danger-25: var(--danger-25);
+  --danger-50: var(--danger-50);
+  --danger-100: var(--danger-100);
+  --danger-200: var(--danger-200);
+  --danger-300: var(--danger-300);
+  --danger-400: var(--danger-400);
+  --danger-500: var(--danger-500);
+  --danger-600: var(--danger-600);
+  --danger-700: var(--danger-700);
+  --danger-800: var(--danger-800);
+  --danger-900: var(--danger-900);
 
-  --warning-25: $warning-25;
-  --warning-50: $warning-50;
-  --warning-100: $warning-100;
-  --warning-200: $warning-200;
-  --warning-300: $warning-300;
-  --warning-400: $warning-400;
-  --warning-500: $warning-500;
-  --warning-600: $warning-600;
-  --warning-700: $warning-700;
-  --warning-800: $warning-800;
-  --warning-900: $warning-900;
+  --warning-25: var(--warning-25);
+  --warning-50: var(--warning-50);
+  --warning-100: var(--warning-100);
+  --warning-200: var(--warning-200);
+  --warning-300: var(--warning-300);
+  --warning-400: var(--warning-400);
+  --warning-500: var(--warning-500);
+  --warning-600: var(--warning-600);
+  --warning-700: var(--warning-700);
+  --warning-800: var(--warning-800);
+  --warning-900: var(--warning-900);
 
-  --success-25: $success-25;
-  --success-50: $success-50;
-  --success-100: $success-100;
-  --success-200: $success-200;
-  --success-300: $success-300;
-  --success-400: $success-400;
-  --success-500: $success-500;
-  --success-600: $success-600;
-  --success-700: $success-700;
-  --success-800: $success-800;
-  --success-900: $success-900;
+  --success-25: var(--success-25);
+  --success-50: var(--success-50);
+  --success-100: var(--success-100);
+  --success-200: var(--success-200);
+  --success-300: var(--success-300);
+  --success-400: var(--success-400);
+  --success-500: var(--success-500);
+  --success-600: var(--success-600);
+  --success-700: var(--success-700);
+  --success-800: var(--success-800);
+  --success-900: var(--success-900);
 
   /* ========================================================================= */
   /* font family */
   /* ========================================================================= */
 
-  --font-family: $font-family--inter;
+  --font-family: var(--font-family--inter);
 
   /* ========================================================================= */
   /* text form */
   /* ========================================================================= */
 
-  --typography-font-size--sm: $font-size--xs;
-  --typography-line-height--sm: $line-height--xs;
-  --typography-letter-spacing--sm: $letter-spacing--xs;
+  --typography-font-size--sm: var(--font-size--xs);
+  --typography-line-height--sm: var(--line-height--xs);
+  --typography-letter-spacing--sm: var(--letter-spacing--xs);
   @include md {
-    --typography-font-size--sm: $font-size--sm;
-    --typography-line-height--sm: $line-height--sm;
-    --typography-letter-spacing--sm: $letter-spacing--sm;
+    --typography-font-size--sm: var(--font-size--sm);
+    --typography-line-height--sm: var(--line-height--sm);
+    --typography-letter-spacing--sm: var(--letter-spacing--sm);
   }
 
-  --typography-font-size--md: $font-size--sm;
-  --typography-line-height--md: $line-height--sm;
-  --typography-letter-spacing--md: $letter-spacing--sm;
+  --typography-font-size--md: var(--font-size--sm);
+  --typography-line-height--md: var(--line-height--sm);
+  --typography-letter-spacing--md: var(--letter-spacing--sm);
   @include md {
-    --typography-font-size--md: $font-size--md;
-    --typography-line-height--md: $line-height--md;
-    --typography-letter-spacing--md: $letter-spacing--md;
+    --typography-font-size--md: var(--font-size--md);
+    --typography-line-height--md: var(--line-height--md);
+    --typography-letter-spacing--md: var(--letter-spacing--md);
   }
 
-  --typography-font-size--lg: $font-size--lg;
-  --typography-line-height--lg: $line-height--lg;
-  --typography-letter-spacing--lg: $letter-spacing--lg;
+  --typography-font-size--lg: var(--font-size--lg);
+  --typography-line-height--lg: var(--line-height--lg);
+  --typography-letter-spacing--lg: var(--letter-spacing--lg);
   @include md {
-    --typography-font-size--lg: $font-size--xl;
-    --typography-line-height--lg: $line-height--xl;
-    --typography-letter-spacing--lg: $letter-spacing--xl;
+    --typography-font-size--lg: var(--font-size--xl);
+    --typography-line-height--lg: var(--line-height--xl);
+    --typography-letter-spacing--lg: var(--letter-spacing--xl);
   }
 
-  --heading-font-size--sm: $font-size--2xl;
-  --heading-line-height--sm: $line-height--2xl;
-  --heading-letter-spacing--sm: $letter-spacing--2xl;
+  --heading-font-size--sm: var(--font-size--2xl);
+  --heading-line-height--sm: var(--line-height--2xl);
+  --heading-letter-spacing--sm: var(--letter-spacing--2xl);
   @include md {
-    --heading-font-size--sm: $font-size--4xl;
-    --heading-line-height--sm: $line-height--4xl;
-    --heading-letter-spacing--sm: $letter-spacing--4xl;
+    --heading-font-size--sm: var(--font-size--4xl);
+    --heading-line-height--sm: var(--line-height--4xl);
+    --heading-letter-spacing--sm: var(--letter-spacing--4xl);
   }
 
-  --heading-font-size--md: $font-size--3xl;
-  --heading-line-height--md: $line-height--3xl;
-  --heading-letter-spacing--md: $letter-spacing--3xl;
+  --heading-font-size--md: var(--font-size--3xl);
+  --heading-line-height--md: var(--line-height--3xl);
+  --heading-letter-spacing--md: var(--letter-spacing--3xl);
   @include md {
-    --heading-font-size--md: $font-size--5xl;
-    --heading-line-height--md: $line-height--5xl;
-    --heading-letter-spacing--md: $letter-spacing--5xl;
+    --heading-font-size--md: var(--font-size--5xl);
+    --heading-line-height--md: var(--line-height--5xl);
+    --heading-letter-spacing--md: var(--letter-spacing--5xl);
   }
 
-  --heading-font-size--lg: $font-size--4xl;
-  --heading-line-height--lg: $line-height--4xl;
-  --heading-letter-spacing--lg: $letter-spacing--4xl;
+  --heading-font-size--lg: var(--font-size--4xl);
+  --heading-line-height--lg: var(--line-height--4xl);
+  --heading-letter-spacing--lg: var(--letter-spacing--4xl);
   @include md {
-    --heading-font-size--lg: $font-size--6xl;
-    --heading-line-height--lg: $line-height--6xl;
-    --heading-letter-spacing--lg: $letter-spacing--6xl;
+    --heading-font-size--lg: var(--font-size--6xl);
+    --heading-line-height--lg: var(--line-height--6xl);
+    --heading-letter-spacing--lg: var(--letter-spacing--6xl);
   }
 
   /* ========================================================================= */
