@@ -2,9 +2,10 @@
   import cn from 'classnames';
 
   /**
-   * @summary the visual size of the text, defaults to 'body'
+   * @summary Informs the size, spacing, and line-height of the text, defaults to 'md'
    */
-  export let level: 'body' | 'caption' = 'body';
+  export let level: 'sm' | 'md' | 'lg' = 'md';
+
   /**
    * @summary specifies the text color, defaults to 'inherit'
    */
@@ -37,14 +38,12 @@
       color: var(--text-color--primary);
     }
 
-    // size
-    &--caption {
-      font-size: var(--typography-size--caption);
-      font-weight: var(--typography-weight--caption);
-    }
-    &--body {
-      font-size: var(--typography-size--body);
-      font-weight: var(--typography-weight--body);
+    $levels: ('sm', 'md', 'lg');
+
+    @each $level in $levels {
+      font-size: var(--typography-letter-spacing--#{$level});
+      line-height: var(--typography-letter-spacing--#{$level});
+      letter-spacing: var(--typography-letter-spacing--#{$level});
     }
   }
 </style>

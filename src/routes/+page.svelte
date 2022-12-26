@@ -1,15 +1,14 @@
 <script>
-  import Card from '@components/card/Card.svelte';
-  import CardSection from '@components/card/CardSection.svelte';
-  import Heading from '@components/heading/Heading.svelte';
-  import Palette from '@components/palette/Palette.svelte';
+  // import Card from '@components/card/Card.svelte';
+  // import CardSection from '@components/card/CardSection.svelte';
+  // import Heading from '@components/heading/Heading.svelte';
+  // import Palette from '@components/palette/Palette.svelte';
   import Typography from '@components/typography/Typography.svelte';
   import Container from '@layouts/Container.svelte';
   import Section from '@layouts/Section.svelte';
-  import { formatNumberAsCurrency } from '@helpers/formatNumber';
-  import Button from '@components/button/Button.svelte';
-  import ButtonPrimary from '@components/button/ButtonPrimary.svelte';
-  import ButtonTailwind from '@components/button/ButtonTailwind.svelte';
+  // import { formatNumberAsCurrency } from '@helpers/formatNumber';
+  // import Button from '@components/button/Button.svelte';
+  // import ButtonPrimary from '@components/button/ButtonPrimary.svelte';
 </script>
 
 <svelte:head>
@@ -19,15 +18,17 @@
 
 <Section palette="primary" isFirstSection>
   <Container class="space-y-4">
-    <Heading color="primary" level={1}>YoOoOooOOOOOza</Heading>
-    <Heading color="primary" level={2}>AyooooOoOo Asuuuuuuuuuuh</Heading>
-    <Heading color="primary" level={3}>assuuuh duuud</Heading>
-    <Typography color="primary" level="body">suh dud</Typography>
-    <Typography color="primary" level="caption">suh</Typography>
+    <!-- <Heading color="primary" level={1}>YoOoOooOOOOOza</Heading> -->
+    <!-- <Heading color="primary" level={2}>AyooooOoOo Asuuuuuuuuuuh</Heading> -->
+    <!-- <Heading color="primary" level={3}>assuuuh duuud</Heading> -->
+
+    <Typography color="primary" level="lg">Okay bro.</Typography>
+    <Typography color="primary" level="md">Okay bro.</Typography>
+    <Typography color="primary" level="sm">Okay bro.</Typography>
   </Container>
 </Section>
 
-<Section>
+<!-- <Section>
   <Container>
     <Palette />
   </Container>
@@ -56,11 +57,7 @@
       <CardSection class="pt-0">
         <Button>Withdraw</Button>
         <ButtonPrimary>Deposit</ButtonPrimary>
-
-        <ButtonTailwind>Withdraw</ButtonTailwind>
-        <ButtonTailwind palette="primary">Deposit</ButtonTailwind>
-        <ButtonTailwind palette="primary" disabled>Deposit</ButtonTailwind>
       </CardSection>
     </Card>
   </Container>
-</Section>
+</Section> -->

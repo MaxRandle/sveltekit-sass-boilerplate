@@ -1,212 +1,145 @@
-/* ========================================================================= */
-/* style theme */
-/* ========================================================================= */
+@use './colors.scss';
+@use './text.scss';
+@import './mixins.scss';
+@import './fonts/inter/inter.scss';
 
-/* ========================================================================= */
-/* media breakpoints */
-/* ========================================================================= */
-
-$media--sm: 40rem; /*  640px */
-$media--md: 48rem; /*  768px */
-$media--lg: 64rem; /* 1024px */
-$media--xl: 80rem; /* 1280px */
+/* Theme is directly accessible in the app and the variables may be programmatically reassigned */
 
 /* ========================================================================= */
 /* media query mixins */
 /* ========================================================================= */
 
-@mixin dark {
-  @media (prefers-color-scheme: dark) {
-    @content;
-  }
-}
-
-@mixin media-sm {
-  @media (min-width: $media--sm) {
-    @content;
-  }
-}
-
-@mixin media-md {
-  @media (min-width: $media--sm) {
-    @content;
-  }
-}
-
-@mixin media-lg {
-  @media (min-width: $media--sm) {
-    @content;
-  }
-}
-
-@mixin media-xl {
-  @media (min-width: $media--sm) {
-    @content;
-  }
-}
-
-/* ========================================================================= */
-/* color spectrum */
-/* ========================================================================= */
-
-$hues: (
-  'base': 'base',
-  'primary': 'primary',
-  'success': 'success',
-  'info': 'info',
-  'warning': 'warning',
-  'danger': 'danger'
-);
-
-$shades: (
-  '50': '50',
-  '100': '100',
-  '200': '200',
-  '300': '300',
-  '400': '400',
-  '500': '500',
-  '600': '600',
-  '700': '700',
-  '800': '800',
-  '900': '900'
-);
-
 :root {
-  --base-50: lch(97% 2 280);
-  --base-100: lch(93% 4 280);
-  --base-200: lch(83% 6 280);
-  --base-300: lch(70% 7 280);
-  --base-400: lch(60% 8 280);
-  --base-500: lch(48% 9 280);
-  --base-600: lch(35% 10 280);
-  --base-700: lch(25% 10.5 280);
-  --base-800: lch(17% 11 280);
-  --base-900: lch(10% 11.5 280);
+  --base-25: $slate-25;
+  --base-50: $slate-50;
+  --base-100: $slate-100;
+  --base-200: $slate-200;
+  --base-300: $slate-300;
+  --base-400: $slate-400;
+  --base-500: $slate-500;
+  --base-600: $slate-600;
+  --base-700: $slate-700;
+  --base-800: $slate-800;
+  --base-900: $slate-900;
 
-  --primary-50: lch(97% 6 200);
-  --primary-100: lch(93% 11 198);
-  --primary-200: lch(83% 16 196);
-  --primary-300: lch(70% 20 194);
-  --primary-400: lch(60% 24 192);
-  --primary-500: lch(48% 28 190);
-  --primary-600: lch(35% 32 188);
-  --primary-700: lch(25% 30 186);
-  --primary-800: lch(17% 28 184);
-  --primary-900: lch(10% 26 182);
+  --primary-25: $purple-25;
+  --primary-50: $purple-50;
+  --primary-100: $purple-100;
+  --primary-200: $purple-200;
+  --primary-300: $purple-300;
+  --primary-400: $purple-400;
+  --primary-500: $purple-500;
+  --primary-600: $purple-600;
+  --primary-700: $purple-700;
+  --primary-800: $purple-800;
+  --primary-900: $purple-900;
 
-  --success-50: lch(97% 12 145);
-  --success-100: lch(93% 20 145);
-  --success-200: lch(83% 28 145);
-  --success-300: lch(70% 36 145);
-  --success-400: lch(60% 40 145);
-  --success-500: lch(48% 44 145);
-  --success-600: lch(35% 48 145);
-  --success-700: lch(25% 50 145);
-  --success-800: lch(17% 52 145);
-  --success-900: lch(10% 54 145);
+  --danger-25: $danger-25;
+  --danger-50: $danger-50;
+  --danger-100: $danger-100;
+  --danger-200: $danger-200;
+  --danger-300: $danger-300;
+  --danger-400: $danger-400;
+  --danger-500: $danger-500;
+  --danger-600: $danger-600;
+  --danger-700: $danger-700;
+  --danger-800: $danger-800;
+  --danger-900: $danger-900;
 
-  --info-50: lch(97% 9 230);
-  --info-100: lch(93% 15 230);
-  --info-200: lch(83% 25 230);
-  --info-300: lch(70% 30 230);
-  --info-400: lch(60% 36 230);
-  --info-500: lch(48% 44 230);
-  --info-600: lch(35% 48 230);
-  --info-700: lch(25% 50 230);
-  --info-800: lch(17% 52 230);
-  --info-900: lch(12% 54 230);
+  --warning-25: $warning-25;
+  --warning-50: $warning-50;
+  --warning-100: $warning-100;
+  --warning-200: $warning-200;
+  --warning-300: $warning-300;
+  --warning-400: $warning-400;
+  --warning-500: $warning-500;
+  --warning-600: $warning-600;
+  --warning-700: $warning-700;
+  --warning-800: $warning-800;
+  --warning-900: $warning-900;
 
-  --warning-50: lch(97% 12 80);
-  --warning-100: lch(93% 20 78);
-  --warning-200: lch(83% 30 76);
-  --warning-300: lch(70% 40 74);
-  --warning-400: lch(60% 50 72);
-  --warning-500: lch(48% 70 70);
-  --warning-600: lch(35% 90 68);
-  --warning-700: lch(25% 70 62);
-  --warning-800: lch(17% 50 58);
-  --warning-900: lch(10% 30 54);
-
-  --danger-50: lch(97% 15 36);
-  --danger-100: lch(93% 25 36);
-  --danger-200: lch(83% 45 36);
-  --danger-300: lch(70% 70 36);
-  --danger-400: lch(60% 80 36);
-  --danger-500: lch(48% 80 36);
-  --danger-600: lch(35% 60 36);
-  --danger-700: lch(25% 45 36);
-  --danger-800: lch(17% 25 36);
-  --danger-900: lch(8% 15 36);
+  --success-25: $success-25;
+  --success-50: $success-50;
+  --success-100: $success-100;
+  --success-200: $success-200;
+  --success-300: $success-300;
+  --success-400: $success-400;
+  --success-500: $success-500;
+  --success-600: $success-600;
+  --success-700: $success-700;
+  --success-800: $success-800;
+  --success-900: $success-900;
 
   /* ========================================================================= */
   /* font family */
   /* ========================================================================= */
 
-  --font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-family: $font-family--inter;
 
   /* ========================================================================= */
   /* text form */
   /* ========================================================================= */
 
-  --font-size--xs: 0.75rem; /*     12px ( -4px) */
-  --font-size--sm: 0.875rem; /*    14px ( -2px) */
-  --font-size--md: 1rem; /*        16px ( +0px) */
-  --font-size--lg: 1.125rem; /*    18px ( +2px) */
-  --font-size--xl: 1.25rem; /*     20px ( +4px) */
-  --font-size--2xl: 1.5rem; /*     24px ( +8px) */
-  --font-size--3xl: 1.75rem; /*    28px (+12px) */
-  --font-size--4xl: 2.125rem; /*   34px (+18px) */
-  --font-size--5xl: 2.5rem; /*     40px (+24px) */
-  --font-size--6xl: 3rem; /*       48px (+32px) */
-  --font-size--7xl: 3.5rem; /*     56px (+40px) */
-
-  --typography-size--caption: var(--font-size--xs);
-  --typography-size--body: var(--font-size--md);
-
-  @include media-md {
-    --typography-size--caption: var(--font-size--sm);
-    --typography-size--body: var(--font-size--lg);
+  --typography-font-size--sm: $font-size--xs;
+  --typography-line-height--sm: $line-height--xs;
+  --typography-letter-spacing--sm: $letter-spacing--xs;
+  @include md {
+    --typography-font-size--sm: $font-size--sm;
+    --typography-line-height--sm: $line-height--sm;
+    --typography-letter-spacing--sm: $letter-spacing--sm;
   }
 
-  --heading-size--h3: var(--font-size--2xl);
-  --heading-size--h2: var(--font-size--4xl);
-  --heading-size--h1: var(--font-size--6xl);
-
-  @include media-md {
-    --heading-size--h3: var(--font-size--3xl);
-    --heading-size--h2: var(--font-size--5xl);
-    --heading-size--h1: var(--font-size--7xl);
+  --typography-font-size--md: $font-size--sm;
+  --typography-line-height--md: $line-height--sm;
+  --typography-letter-spacing--md: $letter-spacing--sm;
+  @include md {
+    --typography-font-size--md: $font-size--md;
+    --typography-line-height--md: $line-height--md;
+    --typography-letter-spacing--md: $letter-spacing--md;
   }
 
-  --typography-weight--caption: 600;
-  --typography-weight--body: 500;
-
-  @include media-md {
-    --typography-weight--caption: 500;
-    --typography-weight--body: 400;
+  --typography-font-size--lg: $font-size--lg;
+  --typography-line-height--lg: $line-height--lg;
+  --typography-letter-spacing--lg: $letter-spacing--lg;
+  @include md {
+    --typography-font-size--lg: $font-size--xl;
+    --typography-line-height--lg: $line-height--xl;
+    --typography-letter-spacing--lg: $letter-spacing--xl;
   }
 
-  --heading-weight--h3: 700;
-  --heading-weight--h2: 600;
-  --heading-weight--h1: 500;
-
-  @include media-md {
-    --heading-weight--h3: 600;
-    --heading-weight--h2: 500;
-    --heading-weight--h1: 400;
+  --heading-font-size--sm: $font-size--2xl;
+  --heading-line-height--sm: $line-height--2xl;
+  --heading-letter-spacing--sm: $letter-spacing--2xl;
+  @include md {
+    --heading-font-size--sm: $font-size--4xl;
+    --heading-line-height--sm: $line-height--4xl;
+    --heading-letter-spacing--sm: $letter-spacing--4xl;
   }
 
-  --heading-line-height--h3: 1.3;
-  --heading-line-height--h2: 1.2;
-  --heading-line-height--h1: 1.1;
+  --heading-font-size--md: $font-size--3xl;
+  --heading-line-height--md: $line-height--3xl;
+  --heading-letter-spacing--md: $letter-spacing--3xl;
+  @include md {
+    --heading-font-size--md: $font-size--5xl;
+    --heading-line-height--md: $line-height--5xl;
+    --heading-letter-spacing--md: $letter-spacing--5xl;
+  }
+
+  --heading-font-size--lg: $font-size--4xl;
+  --heading-line-height--lg: $line-height--4xl;
+  --heading-letter-spacing--lg: $letter-spacing--4xl;
+  @include md {
+    --heading-font-size--lg: $font-size--6xl;
+    --heading-line-height--lg: $line-height--6xl;
+    --heading-letter-spacing--lg: $letter-spacing--6xl;
+  }
 
   /* ========================================================================= */
   /* text color */
   /* ========================================================================= */
 
   --text-color--base: var(--base-900);
-  --text-color--weak: var(--base-600);
+  --text-color--weak: var(--base-500);
   --text-color--primary: var(--primary-600);
 
   @include dark {
@@ -219,10 +152,8 @@ $shades: (
   /* surface background */
   /* ========================================================================= */
 
-  --surface-bg--base: var(--base-50);
+  --surface-bg--base: white;
   --surface-bg--base-raised: var(--base-100);
-  --surface-bg--base-raised2: var(--base-200);
-  --surface-bg--base-raised3: var(--base-300);
 
   --surface-bg--primary: var(--primary-50);
   --surface-bg--primary-raised: var(--primary-100);
@@ -235,8 +166,6 @@ $shades: (
   @include dark {
     --surface-bg--base: var(--base-900);
     --surface-bg--base-raised: var(--base-800);
-    --surface-bg--base-raised2: var(--base-700);
-    --surface-bg--base-raised3: var(--base-600);
 
     --surface-bg--primary: var(--primary-900);
     --surface-bg--primary-raised: var(--primary-800);
