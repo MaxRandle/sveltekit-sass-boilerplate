@@ -1,7 +1,7 @@
+@use './fonts/inter/inter.scss';
 @use './colors.scss';
-@use './text.scss';
+@import './text.scss';
 @import './mixins.scss';
-@import './fonts/inter/inter.scss';
 
 /* Theme is directly accessible in the app and the variables may be programmatically reassigned */
 
@@ -34,41 +34,41 @@
   --primary-800: var(--purple-800);
   --primary-900: var(--purple-900);
 
-  --danger-25: var(--danger-25);
-  --danger-50: var(--danger-50);
-  --danger-100: var(--danger-100);
-  --danger-200: var(--danger-200);
-  --danger-300: var(--danger-300);
-  --danger-400: var(--danger-400);
-  --danger-500: var(--danger-500);
-  --danger-600: var(--danger-600);
-  --danger-700: var(--danger-700);
-  --danger-800: var(--danger-800);
-  --danger-900: var(--danger-900);
+  --danger-25: var(--red-25);
+  --danger-50: var(--red-50);
+  --danger-100: var(--red-100);
+  --danger-200: var(--red-200);
+  --danger-300: var(--red-300);
+  --danger-400: var(--red-400);
+  --danger-500: var(--red-500);
+  --danger-600: var(--red-600);
+  --danger-700: var(--red-700);
+  --danger-800: var(--red-800);
+  --danger-900: var(--red-900);
 
-  --warning-25: var(--warning-25);
-  --warning-50: var(--warning-50);
-  --warning-100: var(--warning-100);
-  --warning-200: var(--warning-200);
-  --warning-300: var(--warning-300);
-  --warning-400: var(--warning-400);
-  --warning-500: var(--warning-500);
-  --warning-600: var(--warning-600);
-  --warning-700: var(--warning-700);
-  --warning-800: var(--warning-800);
-  --warning-900: var(--warning-900);
+  --warning-25: var(--amber-25);
+  --warning-50: var(--amber-50);
+  --warning-100: var(--amber-100);
+  --warning-200: var(--amber-200);
+  --warning-300: var(--amber-300);
+  --warning-400: var(--amber-400);
+  --warning-500: var(--amber-500);
+  --warning-600: var(--amber-600);
+  --warning-700: var(--amber-700);
+  --warning-800: var(--amber-800);
+  --warning-900: var(--amber-900);
 
-  --success-25: var(--success-25);
-  --success-50: var(--success-50);
-  --success-100: var(--success-100);
-  --success-200: var(--success-200);
-  --success-300: var(--success-300);
-  --success-400: var(--success-400);
-  --success-500: var(--success-500);
-  --success-600: var(--success-600);
-  --success-700: var(--success-700);
-  --success-800: var(--success-800);
-  --success-900: var(--success-900);
+  --success-25: var(--emerald-25);
+  --success-50: var(--emerald-50);
+  --success-100: var(--emerald-100);
+  --success-200: var(--emerald-200);
+  --success-300: var(--emerald-300);
+  --success-400: var(--emerald-400);
+  --success-500: var(--emerald-500);
+  --success-600: var(--emerald-600);
+  --success-700: var(--emerald-700);
+  --success-800: var(--emerald-800);
+  --success-900: var(--emerald-900);
 
   /* ========================================================================= */
   /* font family */
@@ -187,6 +187,8 @@
   /* ========================================================================= */
 
   --border-color--base: var(--base-400);
+  --border-color--base-hover: var(--base-500);
+
   --border-color--primary: var(--primary-400);
   --border-color--danger: var(--danger-400);
   --border-color--warning: var(--warning-400);
@@ -194,7 +196,9 @@
   --border-color--success: var(--success-400);
 
   @include dark {
-    --border-color--base: var(--base-400);
+    --border-color--base: var(--base-500);
+    --border-color--base-hover: var(--base-400);
+
     --border-color--primary: var(--primary-400);
     --border-color--danger: var(--danger-400);
     --border-color--warning: var(--warning-400);
@@ -203,23 +207,8 @@
   }
 
   /* ========================================================================= */
-  /* button */
-  /* ========================================================================= */
-
-  --button-base-bg: var(--base-50);
-  --button-base-bg--hover: var(--base-100);
-  @include dark {
-    --button-base-bg: var(--base-900);
-    --button-base-bg--hover: var(--base-800);
-  }
-
-  --button-primary-bg: var(--primary-700);
-  --button-primary-bg--hover: var(--primary-600);
-
-  /* ========================================================================= */
   /* misc */
   /* ========================================================================= */
 
-  --border-radius--square: 2px;
-  --border-radius--md: 16px;
+  --border-radius--surface: 16px;
 }

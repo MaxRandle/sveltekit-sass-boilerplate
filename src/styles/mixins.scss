@@ -2,16 +2,16 @@
 /* media breakpoints */
 /* ========================================================================= */
 
-$media--sm: 40rem; /*   640px */
-$media--md: 48rem; /*   768px */
-$media--lg: 64rem; /*  1024px */
-$media--xl: 80rem; /*  1280px */
-
 @mixin dark {
   @media (prefers-color-scheme: dark) {
     @content;
   }
 }
+
+$media--sm: 40rem; /*   640px */
+$media--md: 48rem; /*   768px */
+$media--lg: 64rem; /*  1024px */
+$media--xl: 80rem; /*  1280px */
 
 @mixin sm {
   @media (min-width: $media--sm) {

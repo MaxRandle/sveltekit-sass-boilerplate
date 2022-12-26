@@ -1,39 +1,22 @@
 <script lang="ts">
-  import classNames from 'classnames';
-
-  let className: string | undefined = undefined;
-  export { className as class };
-
-  const classes = classNames({
-    [className ?? '']: className
-  });
+  import ButtonUnstyled from './ButtonUnstyled.svelte';
 </script>
 
-<button class={classes} on:click>
+<ButtonUnstyled {...$$props} class="button-base">
   <slot />
-</button>
+</ButtonUnstyled>
 
-<style lang="scss">
-  button {
-    --button-color: /*        */ var(--color, /*        */ inherit);
-    --button-bg: /*           */ var(--bg, /*           */ var(--button-base-bg));
-    --button-bg--hover: /*    */ var(--bg--hover, /*    */ var(--button-base-bg--hover));
-    --button-border-color: /* */ var(--border-color, /* */ var(--border-color--base));
+<style lang="scss" global>
+  .button-base {
+    --color: inherit;
+    --bg: var(--base-50);
+    --bg--hover: var(--base-100);
+    --border-color: var(--border-color--base);
+    --border-color--hover: var(--border-color--base-hover);
 
-    --button-border-radius: 0.5rem;
-
-    padding: 0.75rem 1rem;
-    font-weight: bold;
-
-    color: var(--button-color);
-    background-color: var(--button-bg);
-    border-color: var(--button-border-color);
-    border-width: 1px;
-    border-style: solid;
-    border-radius: var(--button-border-radius);
-
-    &:hover {
-      --button-bg: var(--button-bg--hover);
+    @include dark {
+      --bg: var(--base-900);
+      --bg--hover: var(--base-800);
     }
   }
 </style>

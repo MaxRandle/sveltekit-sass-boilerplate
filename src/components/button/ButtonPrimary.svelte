@@ -1,12 +1,17 @@
 <script lang="ts">
-  import Button from './Button.svelte';
+  import ButtonUnstyled from './ButtonUnstyled.svelte';
 </script>
 
-<Button
-  {...$$props}
-  --color="white"
-  --bg="var(--button-primary-bg)"
-  --bg--hover="var(--button-primary-bg--hover)"
->
+<ButtonUnstyled {...$$props} class="button-primary">
   <slot />
-</Button>
+</ButtonUnstyled>
+
+<style lang="scss" global>
+  .button-primary {
+    --color: white;
+    --bg: var(--primary-600);
+    --bg--hover: var(--primary-700);
+    --border-color: var(--primary-600);
+    --border-color--hover: var(--primary-700);
+  }
+</style>

@@ -2,13 +2,13 @@
   import Card from '@components/card/Card.svelte';
   import CardSection from '@components/card/CardSection.svelte';
   import Heading from '@components/heading/Heading.svelte';
-  // import Palette from '@components/palette/Palette.svelte';
   import Typography from '@components/typography/Typography.svelte';
   import Container from '@layouts/Container.svelte';
   import Section from '@layouts/Section.svelte';
   import { formatNumberAsCurrency } from '@helpers/formatNumber';
   import Button from '@components/button/Button.svelte';
   import ButtonPrimary from '@components/button/ButtonPrimary.svelte';
+  import ButtonDanger from '@components/button/ButtonDanger.svelte';
 </script>
 
 <svelte:head>
@@ -39,8 +39,21 @@
       </CardSection>
 
       <CardSection class="pt-0">
+        <Button size="sm">Withdraw</Button>
+        <ButtonPrimary size="sm">Deposit</ButtonPrimary>
+        <ButtonDanger size="sm">Delete</ButtonDanger>
+      </CardSection>
+
+      <CardSection class="pt-0">
         <Button>Withdraw</Button>
         <ButtonPrimary>Deposit</ButtonPrimary>
+        <ButtonDanger>Delete</ButtonDanger>
+      </CardSection>
+
+      <CardSection class="pt-0">
+        <Button size="lg">Withdraw</Button>
+        <ButtonPrimary size="lg">Deposit</ButtonPrimary>
+        <ButtonDanger size="lg">Delete</ButtonDanger>
       </CardSection>
     </Card>
   </Container>
