@@ -80,22 +80,22 @@
   /* text form */
   /* ========================================================================= */
 
-  --typography-font-size--sm: var(--font-size--xs);
-  --typography-line-height--sm: var(--line-height--xs);
-  --typography-letter-spacing--sm: var(--letter-spacing--xs);
+  --typography-font-size--sm: var(--font-size--sm);
+  --typography-line-height--sm: var(--line-height--sm);
+  --typography-letter-spacing--sm: var(--letter-spacing--sm);
   @include md {
-    --typography-font-size--sm: var(--font-size--sm);
-    --typography-line-height--sm: var(--line-height--sm);
-    --typography-letter-spacing--sm: var(--letter-spacing--sm);
+    --typography-font-size--sm: var(--font-size--md);
+    --typography-line-height--sm: var(--line-height--md);
+    --typography-letter-spacing--sm: var(--letter-spacing--md);
   }
 
-  --typography-font-size--md: var(--font-size--sm);
-  --typography-line-height--md: var(--line-height--sm);
-  --typography-letter-spacing--md: var(--letter-spacing--sm);
+  --typography-font-size--md: var(--font-size--md);
+  --typography-line-height--md: var(--line-height--md);
+  --typography-letter-spacing--md: var(--letter-spacing--md);
   @include md {
-    --typography-font-size--md: var(--font-size--md);
-    --typography-line-height--md: var(--line-height--md);
-    --typography-letter-spacing--md: var(--letter-spacing--md);
+    --typography-font-size--md: var(--font-size--lg);
+    --typography-line-height--md: var(--line-height--lg);
+    --typography-letter-spacing--md: var(--letter-spacing--lg);
   }
 
   --typography-font-size--lg: var(--font-size--lg);
@@ -110,28 +110,34 @@
   --heading-font-size--sm: var(--font-size--2xl);
   --heading-line-height--sm: var(--line-height--2xl);
   --heading-letter-spacing--sm: var(--letter-spacing--2xl);
+  --heading-font-weight--sm: var(--font-weight--medium);
   @include md {
-    --heading-font-size--sm: var(--font-size--4xl);
-    --heading-line-height--sm: var(--line-height--4xl);
-    --heading-letter-spacing--sm: var(--letter-spacing--4xl);
+    --heading-font-size--sm: var(--font-size--3xl);
+    --heading-line-height--sm: var(--line-height--3xl);
+    --heading-letter-spacing--sm: var(--letter-spacing--3xl);
+    --heading-font-weight--sm: var(--font-weight--semibold);
   }
 
   --heading-font-size--md: var(--font-size--3xl);
   --heading-line-height--md: var(--line-height--3xl);
   --heading-letter-spacing--md: var(--letter-spacing--3xl);
+  --heading-font-weight--md: var(--font-weight--medium);
   @include md {
     --heading-font-size--md: var(--font-size--5xl);
     --heading-line-height--md: var(--line-height--5xl);
     --heading-letter-spacing--md: var(--letter-spacing--5xl);
+    --heading-font-weight--md: var(--font-weight--medium);
   }
 
   --heading-font-size--lg: var(--font-size--4xl);
   --heading-line-height--lg: var(--line-height--4xl);
   --heading-letter-spacing--lg: var(--letter-spacing--4xl);
+  --heading-font-weight--lg: var(--font-weight--medium);
   @include md {
-    --heading-font-size--lg: var(--font-size--6xl);
-    --heading-line-height--lg: var(--line-height--6xl);
-    --heading-letter-spacing--lg: var(--letter-spacing--6xl);
+    --heading-font-size--lg: var(--font-size--7xl);
+    --heading-line-height--lg: var(--line-height--7xl);
+    --heading-letter-spacing--lg: var(--letter-spacing--7xl);
+    --heading-font-weight--lg: var(--font-weight--normal);
   }
 
   /* ========================================================================= */
@@ -200,8 +206,12 @@
   /* button */
   /* ========================================================================= */
 
-  --button-base-bg: var(--base-900);
-  --button-base-bg--hover: var(--base-800);
+  --button-base-bg: var(--base-50);
+  --button-base-bg--hover: var(--base-100);
+  @include dark {
+    --button-base-bg: var(--base-900);
+    --button-base-bg--hover: var(--base-800);
+  }
 
   --button-primary-bg: var(--primary-700);
   --button-primary-bg--hover: var(--primary-600);

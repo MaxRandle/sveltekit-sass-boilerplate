@@ -45,21 +45,13 @@
       color: var(--text-color--primary);
     }
 
-    // size
-    &--3 {
-      font-size: var(--heading-size--h3);
-      line-height: var(--heading-line-height--h3);
-      font-weight: var(--heading-weight--h3);
-    }
-    &--2 {
-      font-size: var(--heading-size--h2);
-      line-height: var(--heading-line-height--h2);
-      font-weight: var(--heading-weight--h2);
-    }
-    &--1 {
-      font-size: var(--heading-size--h1);
-      line-height: var(--heading-line-height--h1);
-      font-weight: var(--heading-weight--h1);
+    @each $levelKey, $levelValue in (1: 'lg', 2: 'md', 3: 'sm') {
+      &--#{$levelKey} {
+        font-size: var(--heading-font-size--#{$levelValue});
+        line-height: var(--heading-line-height--#{$levelValue});
+        letter-spacing: var(--heading-letter-spacing--#{$levelValue});
+        font-weight: var(--heading-font-weight--#{$levelValue});
+      }
     }
   }
 </style>

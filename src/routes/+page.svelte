@@ -1,14 +1,14 @@
 <script>
-  // import Card from '@components/card/Card.svelte';
-  // import CardSection from '@components/card/CardSection.svelte';
-  // import Heading from '@components/heading/Heading.svelte';
+  import Card from '@components/card/Card.svelte';
+  import CardSection from '@components/card/CardSection.svelte';
+  import Heading from '@components/heading/Heading.svelte';
   // import Palette from '@components/palette/Palette.svelte';
   import Typography from '@components/typography/Typography.svelte';
   import Container from '@layouts/Container.svelte';
   import Section from '@layouts/Section.svelte';
-  // import { formatNumberAsCurrency } from '@helpers/formatNumber';
-  // import Button from '@components/button/Button.svelte';
-  // import ButtonPrimary from '@components/button/ButtonPrimary.svelte';
+  import { formatNumberAsCurrency } from '@helpers/formatNumber';
+  import Button from '@components/button/Button.svelte';
+  import ButtonPrimary from '@components/button/ButtonPrimary.svelte';
 </script>
 
 <svelte:head>
@@ -18,29 +18,13 @@
 
 <Section>
   <Container class="space-y-4">
-    <!-- <Heading color="primary" level={1}>YoOoOooOOOOOza</Heading> -->
-    <!-- <Heading color="primary" level={2}>AyooooOoOo Asuuuuuuuuuuh</Heading> -->
-    <!-- <Heading color="primary" level={3}>assuuuh duuud</Heading> -->
+    <Heading color="primary" level={1}>Okay bro.</Heading>
+    <Heading color="primary" level={2}>Okay bro.</Heading>
+    <Heading color="primary" level={3}>Okay bro.</Heading>
 
     <Typography color="weak" level="lg">Okay bro.</Typography>
     <Typography color="weak" level="md">Okay bro.</Typography>
     <Typography color="weak" level="sm">Okay bro.</Typography>
-  </Container>
-</Section>
-
-<!-- <Section>
-  <Container>
-    <Palette />
-  </Container>
-</Section>
-
-<Section>
-  <Container>
-    <Card palette="primary-raised" texture="SmoothWaves">
-      <CardSection>
-        <Heading level={3}>content boi</Heading>
-      </CardSection>
-    </Card>
   </Container>
 </Section>
 
@@ -60,4 +44,4 @@
       </CardSection>
     </Card>
   </Container>
-</Section> -->
+</Section>
