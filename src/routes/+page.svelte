@@ -23,9 +23,9 @@
 
 <Section>
   <Container class="space-y-4">
-    <Heading color="primary" level={1}>Okay bro.</Heading>
-    <Heading color="primary" level={2}>Okay bro.</Heading>
-    <Heading color="primary" level={3}>Okay bro.</Heading>
+    <Heading color="primary" level={{ base: 'md', md: '2xl' }}>Okay bro.</Heading>
+    <!-- <Heading color="base" level={2}>Okay bro.</Heading> -->
+    <!-- <Heading color="primary" level={3}>Okay bro.</Heading> -->
 
     <Typography color="weak" level="lg">Okay bro.</Typography>
     <Typography color="weak" level="md">Okay bro.</Typography>
@@ -38,9 +38,9 @@
     <Card texture="Bubbles">
       <CardSection>
         <Typography color="weak">Wallet balance</Typography>
-        <Heading class="mt-2" level={3}>
+        <!-- <Heading class="mt-2" level={3}>
           {formatNumberAsCurrency(5684.6)}
-        </Heading>
+        </Heading> -->
       </CardSection>
 
       <CardSection class="pt-0">

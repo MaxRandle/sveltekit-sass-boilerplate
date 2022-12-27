@@ -101,38 +101,38 @@
     --typography-letter-spacing--lg: var(--letter-spacing--xl);
   }
 
-  --heading-font-size--sm: var(--font-size--2xl);
-  --heading-line-height--sm: var(--line-height--2xl);
-  --heading-letter-spacing--sm: var(--letter-spacing--2xl);
-  --heading-font-weight--sm: var(--font-weight--medium);
-  @include md {
-    --heading-font-size--sm: var(--font-size--3xl);
-    --heading-line-height--sm: var(--line-height--3xl);
-    --heading-letter-spacing--sm: var(--letter-spacing--3xl);
-    --heading-font-weight--sm: var(--font-weight--semibold);
-  }
+  // --heading-font-size--sm: var(--font-size--2xl);
+  // --heading-line-height--sm: var(--line-height--2xl);
+  // --heading-letter-spacing--sm: var(--letter-spacing--2xl);
+  // --heading-font-weight--sm: var(--font-weight--medium);
+  // @include md {
+  //   --heading-font-size--sm: var(--font-size--3xl);
+  //   --heading-line-height--sm: var(--line-height--3xl);
+  //   --heading-letter-spacing--sm: var(--letter-spacing--3xl);
+  //   --heading-font-weight--sm: var(--font-weight--semibold);
+  // }
 
-  --heading-font-size--md: var(--font-size--3xl);
-  --heading-line-height--md: var(--line-height--3xl);
-  --heading-letter-spacing--md: var(--letter-spacing--3xl);
-  --heading-font-weight--md: var(--font-weight--medium);
-  @include md {
-    --heading-font-size--md: var(--font-size--5xl);
-    --heading-line-height--md: var(--line-height--5xl);
-    --heading-letter-spacing--md: var(--letter-spacing--5xl);
-    --heading-font-weight--md: var(--font-weight--medium);
-  }
+  // --heading-font-size--md: var(--font-size--3xl);
+  // --heading-line-height--md: var(--line-height--3xl);
+  // --heading-letter-spacing--md: var(--letter-spacing--3xl);
+  // --heading-font-weight--md: var(--font-weight--medium);
+  // @include md {
+  //   --heading-font-size--md: var(--font-size--5xl);
+  //   --heading-line-height--md: var(--line-height--5xl);
+  //   --heading-letter-spacing--md: var(--letter-spacing--5xl);
+  //   --heading-font-weight--md: var(--font-weight--medium);
+  // }
 
-  --heading-font-size--lg: var(--font-size--4xl);
-  --heading-line-height--lg: var(--line-height--4xl);
-  --heading-letter-spacing--lg: var(--letter-spacing--4xl);
-  --heading-font-weight--lg: var(--font-weight--medium);
-  @include md {
-    --heading-font-size--lg: var(--font-size--7xl);
-    --heading-line-height--lg: var(--line-height--7xl);
-    --heading-letter-spacing--lg: var(--letter-spacing--7xl);
-    --heading-font-weight--lg: var(--font-weight--normal);
-  }
+  // --heading-font-size--lg: var(--font-size--4xl);
+  // --heading-line-height--lg: var(--line-height--4xl);
+  // --heading-letter-spacing--lg: var(--letter-spacing--4xl);
+  // --heading-font-weight--lg: var(--font-weight--medium);
+  // @include md {
+  //   --heading-font-size--lg: var(--font-size--7xl);
+  //   --heading-line-height--lg: var(--line-height--7xl);
+  //   --heading-letter-spacing--lg: var(--letter-spacing--7xl);
+  //   --heading-font-weight--lg: var(--font-weight--normal);
+  // }
 
   /* ========================================================================= */
   /* text color */
