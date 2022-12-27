@@ -1,10 +1,10 @@
 <script lang="ts">
-  import CreditCard from './svgs/CreditCard.svelte';
+  import Bubbles from './svgs/Bubbles.svelte';
   import SmoothWaves from './svgs/SmoothWaves.svelte';
 
   const Pattern = {
     SmoothWaves: 'SmoothWaves',
-    CreditCard: 'CreditCard'
+    Bubbles: 'Bubbles'
   } as const;
 
   type Pattern = typeof Pattern[keyof typeof Pattern];
@@ -16,13 +16,13 @@
 </script>
 
 {#if pattern === 'SmoothWaves'}
-  <SmoothWaves />
-{:else if pattern === 'CreditCard'}
-  <CreditCard />
+  <SmoothWaves class="texture-svg" />
+{:else if pattern === 'Bubbles'}
+  <Bubbles class="texture-svg" />
 {/if}
 
-<style lang="scss">
-  :global svg {
+<style lang="scss" global>
+  .texture-svg {
     --svg-path-fill: #00000010;
     --filter: brightness(90%);
 
@@ -38,7 +38,7 @@
     width: 100%;
     height: 100%;
 
-    & > path {
+    path {
       fill: var(--texture-bg);
       filter: var(--filter);
       fill-opacity: 0.3;

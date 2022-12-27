@@ -1,13 +1,17 @@
 <script lang="ts">
-  import classNames from 'classnames';
+  import clsx from 'clsx';
+  import { getButtonGroupContext } from './@types';
+
+  const group = getButtonGroupContext();
 
   /**
    * @summary specifies the size of the button. Defaults to `md`
    */
   export let size: 'sm' | 'md' | 'lg' = 'md';
 
-  const classes = classNames(
+  const classes = clsx(
     'button',
+    group && 'group',
     {
       [`button--${size}`]: size
     },
@@ -22,6 +26,7 @@
 <style lang="scss">
   .button {
     --button-color: var(--color);
+    --button-color--hover: var(--color--hover);
     --button-bg: var(--bg);
     --button-bg--hover: var(--bg--hover);
     --button-border-color: var(--border-color);
@@ -43,6 +48,7 @@
     border-radius: 0.5rem;
 
     &:hover {
+      --button-color: var(--button-color--hover);
       --button-bg: var(--button-bg--hover);
       --button-border-color: var(--button-border-color--hover);
     }
@@ -51,6 +57,21 @@
       &--#{$size} {
         --button-padding: var(--button-padding--#{$size});
       }
+    }
+  }
+
+  .group {
+    border-radius: 0;
+    &:first-child {
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+    }
+    &:last-child {
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+    }
+    &:hover {
+      position: relative;
     }
   }
 </style>

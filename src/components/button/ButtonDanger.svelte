@@ -9,6 +9,7 @@
 <style lang="scss" global>
   .button-danger {
     --color: white;
+    --color--hover: white;
     --bg: var(--danger-600);
     --bg--hover: var(--danger-700);
     --border-color: var(--danger-600);

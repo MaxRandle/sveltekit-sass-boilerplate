@@ -71,12 +71,6 @@
   --success-900: var(--emerald-900);
 
   /* ========================================================================= */
-  /* font family */
-  /* ========================================================================= */
-
-  --font-family: var(--font-family--inter);
-
-  /* ========================================================================= */
   /* text form */
   /* ========================================================================= */
 
@@ -186,8 +180,8 @@
   /* border color */
   /* ========================================================================= */
 
-  --border-color--base: var(--base-400);
-  --border-color--base-hover: var(--base-500);
+  --border-color--base: var(--base-300);
+  --border-color--base-hover: var(--base-400);
 
   --border-color--primary: var(--primary-400);
   --border-color--danger: var(--danger-400);
@@ -196,8 +190,8 @@
   --border-color--success: var(--success-400);
 
   @include dark {
-    --border-color--base: var(--base-500);
-    --border-color--base-hover: var(--base-400);
+    --border-color--base: var(--base-600);
+    --border-color--base-hover: var(--base-500);
 
     --border-color--primary: var(--primary-400);
     --border-color--danger: var(--danger-400);

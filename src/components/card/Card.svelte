@@ -25,7 +25,7 @@
 
 <style lang="scss">
   .card {
-    border-radius: var(--border-radius--md);
+    border-radius: var(--border-radius--surface);
     position: relative;
     overflow: hidden;
 

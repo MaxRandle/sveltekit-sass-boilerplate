@@ -1,5 +1,5 @@
 <script lang="ts">
-  import classNames from 'classnames';
+  import clsx from 'clsx';
 
   let className: string | undefined = undefined;
   export { className as class };
@@ -9,7 +9,7 @@
    */
   export let hasTopPadding: boolean = true;
 
-  const classes = classNames('relative p-6', className, { 'pt-0': !hasTopPadding });
+  const classes = clsx('relative p-6', className, { 'pt-0': !hasTopPadding });
 </script>
 
 <div class={classes}><slot /></div>

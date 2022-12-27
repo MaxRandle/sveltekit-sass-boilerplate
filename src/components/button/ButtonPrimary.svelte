@@ -9,6 +9,7 @@
 <style lang="scss" global>
   .button-primary {
     --color: white;
+    --color--hover: white;
     --bg: var(--primary-600);
     --bg--hover: var(--primary-700);
     --border-color: var(--primary-600);

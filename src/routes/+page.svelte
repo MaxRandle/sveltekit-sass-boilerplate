@@ -9,6 +9,11 @@
   import Button from '@components/button/Button.svelte';
   import ButtonPrimary from '@components/button/ButtonPrimary.svelte';
   import ButtonDanger from '@components/button/ButtonDanger.svelte';
+  import ButtonGroup from '@components/button/ButtonGroup.svelte';
+  import Avatar from '@components/avatar/Avatar.svelte';
+  import { UserIcon } from 'svelte-feather-icons';
+  import AvatarContainer from '@components/avatar/AvatarContainer.svelte';
+  import AvatarGroup from '@components/avatar/AvatarGroup.svelte';
 </script>
 
 <svelte:head>
@@ -30,18 +35,12 @@
 
 <Section>
   <Container>
-    <Card texture="CreditCard">
+    <Card texture="Bubbles">
       <CardSection>
         <Typography color="weak">Wallet balance</Typography>
         <Heading class="mt-2" level={3}>
           {formatNumberAsCurrency(5684.6)}
         </Heading>
-      </CardSection>
-
-      <CardSection class="pt-0">
-        <Button size="sm">Withdraw</Button>
-        <ButtonPrimary size="sm">Deposit</ButtonPrimary>
-        <ButtonDanger size="sm">Delete</ButtonDanger>
       </CardSection>
 
       <CardSection class="pt-0">
@@ -51,10 +50,45 @@
       </CardSection>
 
       <CardSection class="pt-0">
-        <Button size="lg">Withdraw</Button>
-        <ButtonPrimary size="lg">Deposit</ButtonPrimary>
-        <ButtonDanger size="lg">Delete</ButtonDanger>
+        <ButtonGroup>
+          <Button>ABC</Button>
+          <Button>ABC</Button>
+          <Button>ABC</Button>
+        </ButtonGroup>
       </CardSection>
     </Card>
+  </Container>
+</Section>
+
+<Section>
+  <Container class="space-y-4">
+    <AvatarContainer>
+      <Avatar size="sm">OR</Avatar>
+      <div>
+        <Typography class="font-semibold">Olivia Rhye</Typography>
+        <Typography color="weak">olivia@untitledui.com</Typography>
+      </div>
+    </AvatarContainer>
+    <AvatarContainer>
+      <Avatar size="md"><UserIcon /></Avatar>
+      <div>
+        <Typography class="font-semibold">Olivia Rhye</Typography>
+        <Typography color="weak">olivia@untitledui.com</Typography>
+      </div>
+    </AvatarContainer>
+    <AvatarContainer>
+      <Avatar size="lg" src="http://placekitten.com/300/500/" />
+      <div>
+        <Typography class="font-semibold">Olivia Rhye</Typography>
+        <Typography color="weak">olivia@untitledui.com</Typography>
+      </div>
+    </AvatarContainer>
+
+    <AvatarGroup>
+      <Avatar>OR</Avatar>
+      <Avatar><UserIcon /></Avatar>
+      <Avatar src="http://placekitten.com/96/96/" />
+      <Avatar>+5</Avatar>
+    </AvatarGroup>
   </Container>
 </Section>

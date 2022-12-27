@@ -36,3 +36,47 @@ $media--xl: 80rem; /*  1280px */
     @content;
   }
 }
+
+// @each $level-key, $level in $heading-level-map {
+//   &--level-#{$level-key} {
+//     @if map-has-key($level, "base") {
+//       @if map-deep-get($level, "base", "font-size") {
+//         --heading-font-size: #{map-deep-get($level, "base", "font-size")};
+//       }
+//       @if map-deep-get($level, "base", "font-weight") {
+//         --heading-font-weight: #{map-deep-get($level, "base", "font-weight")};
+//       }
+//       @if map-deep-get($level, "base", "font-size") {
+//         --heading-line-height: #{map-deep-get($level, "base", "line-height")};
+//       }
+//     }
+
+//     @each $breakpoint-key, $breakpoint in $screen-size-map {
+//       @if map-get($level, $breakpoint-key) {
+//         @media (min-width: $breakpoint) {
+//           @if map-deep-get($level, $breakpoint-key, "font-size") {
+//             --heading-font-size: #{map-deep-get(
+//                 $level,
+//                 $breakpoint-key,
+//                 "font-size"
+//               )};
+//           }
+//           @if map-deep-get($level, $breakpoint-key, "font-weight") {
+//             --heading-font-weight: #{map-deep-get(
+//                 $level,
+//                 $breakpoint-key,
+//                 "font-weight"
+//               )};
+//           }
+//           @if map-deep-get($level, $breakpoint-key, "font-size") {
+//             --heading-line-height: #{map-deep-get(
+//                 $level,
+//                 $breakpoint-key,
+//                 "line-height"
+//               )};
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

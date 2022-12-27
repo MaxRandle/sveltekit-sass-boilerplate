@@ -1,5 +1,5 @@
 <script lang="ts">
-  import cn from 'classnames';
+  import cn from 'clsx';
 
   /**
    * @summary Informs the size, spacing, and line-height of the text, defaults to 'md'
@@ -11,11 +11,14 @@
    */
   export let color: 'base' | 'weak' | 'primary' | undefined = undefined;
 
-  const classes = cn({
-    [`typography`]: true,
-    [`typography--${level}`]: level,
-    [`typography--${color}`]: color
-  });
+  const classes = cn(
+    {
+      [`typography`]: true,
+      [`typography--${level}`]: level,
+      [`typography--${color}`]: color
+    },
+    $$props.class
+  );
 </script>
 
 <p class={classes}>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import cn from 'classnames';
+  import cn from 'clsx';
 
   /**
    * @summary the size of the heading. This property informs the DOM node type

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import cn from 'classnames';
+  import clsx from 'clsx';
 
   let className: string | undefined = undefined;
   export { className as class };
@@ -22,7 +22,7 @@
   };
 </script>
 
-<section class="my-20 sm:my-32 {cn(classes)}">
+<section class="my-20 sm:my-32 {clsx(classes)}">
   <slot />
 </section>
 
