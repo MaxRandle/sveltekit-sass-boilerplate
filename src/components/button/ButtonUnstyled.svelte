@@ -70,7 +70,8 @@
       border-top-right-radius: 0.5rem;
       border-bottom-right-radius: 0.5rem;
     }
-    &:hover {
+    &:hover,
+    &:focus-visible {
       position: relative;
     }
   }

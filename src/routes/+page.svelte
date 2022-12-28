@@ -15,6 +15,7 @@
   import AvatarContainer from '@components/avatar/AvatarContainer.svelte';
   import AvatarGroup from '@components/avatar/AvatarGroup.svelte';
   import Badge from '@components/badge/Badge.svelte';
+  import Input from '@components/input/Input.svelte';
 </script>
 
 <svelte:head>
@@ -100,5 +101,13 @@
     <Badge indicator="dot" palette="primary">Active</Badge>
     <Badge indicator="up" palette="success">29.6%</Badge>
     <Badge indicator="down" palette="danger">18.8%</Badge>
+  </Container>
+</Section>
+
+<Section>
+  <Container class="space-y-2">
+    <Input placeholder="example@email.com" />
+    <Input disabled placeholder="example@email.com" />
+    <Input aria-invalid placeholder="example@email.com" />
   </Container>
 </Section>

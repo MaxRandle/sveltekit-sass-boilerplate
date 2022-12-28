@@ -141,4 +141,14 @@
   /* ========================================================================= */
 
   --border-radius--surface: 16px;
+
+  --focus-outline--base: 4px solid var(--base-100);
+  --focus-outline--primary: 4px solid var(--primary-100);
+  --focus-outline--danger: 4px solid var(--danger-100);
+
+  @include dark {
+    --focus-outline--base: 4px solid var(--base-700);
+    --focus-outline--primary: 4px solid var(--primary-900);
+    --focus-outline--danger: 4px solid var(--danger-900);
+  }
 }
