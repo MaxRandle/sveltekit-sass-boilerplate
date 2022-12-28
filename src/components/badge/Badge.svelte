@@ -56,21 +56,41 @@
       --badge-color: var(--base-700);
       --badge-bg: var(--base-100);
       --badge-indicator-bg: var(--base-500);
+      @include dark {
+        --badge-color: var(--base-100);
+        --badge-bg: var(--base-700);
+        --badge-indicator-bg: var(--base-200);
+      }
     }
     &--primary {
       --badge-color: var(--primary-700);
       --badge-bg: var(--primary-50);
       --badge-indicator-bg: var(--primary-500);
+      @include dark {
+        --badge-color: var(--primary-50);
+        --badge-bg: var(--primary-700);
+        --badge-indicator-bg: var(--primary-200);
+      }
     }
     &--success {
       --badge-color: var(--success-700);
       --badge-bg: var(--success-50);
       --badge-indicator-bg: var(--success-500);
+      @include dark {
+        --badge-color: var(--success-50);
+        --badge-bg: var(--success-700);
+        --badge-indicator-bg: var(--success-200);
+      }
     }
     &--danger {
       --badge-color: var(--danger-700);
       --badge-bg: var(--danger-50);
       --badge-indicator-bg: var(--danger-500);
+      @include dark {
+        --badge-color: var(--danger-50);
+        --badge-bg: var(--danger-700);
+        --badge-indicator-bg: var(--danger-200);
+      }
     }
 
     .indicator {
