@@ -8,14 +8,6 @@
   }
 }
 
-$screen-size-map: (
-  'base': 0rem,
-  'sm': 40rem,
-  'md': 48rem,
-  'lg': 64rem,
-  'xl': 80rem
-);
-
 $media--sm: 40rem; /*   640px */
 $media--md: 48rem; /*   768px */
 $media--lg: 64rem; /*  1024px */
@@ -50,4 +42,28 @@ $media--xl: 80rem; /*  1280px */
     $map: map-get($map, $key);
   }
   @return $map;
+}
+
+$screen-size-map: (
+  'base': 0rem,
+  'sm': 40rem,
+  'md': 48rem,
+  'lg': 64rem,
+  'xl': 80rem
+);
+
+$heading-level-map: ('xs', 'sm', 'md', 'lg', 'xl', '2xl');
+
+@mixin make-responsive-classes($class-name, $class-value-map) {
+  @each $breakpoint-label, $breakpoint-value in $screen-size-map {
+    .breakpoint-#{$breakpoint-label} {
+      @each $class-value in $class-value-map {
+        &--#{$class-name}-#{$class-value} {
+          @media (min-width: $breakpoint-value) {
+            @content ($class-value);
+          }
+        }
+      }
+    }
+  }
 }

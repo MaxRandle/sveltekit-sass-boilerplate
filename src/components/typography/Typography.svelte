@@ -1,22 +1,30 @@
 <script lang="ts">
-  import cn from 'clsx';
+  import { getResponsiveClasses, type ResponsiveProp } from '@helpers/components';
+  import clsx from 'clsx';
 
   /**
-   * @summary Informs the size, spacing, and line-height of the text, defaults to 'md'
+   * @summary Informs the `font-size` and `line-height` of the text. Defaults to `md`.
    */
-  export let level: 'sm' | 'md' | 'lg' = 'md';
+  export let level: ResponsiveProp<'xs' | 'sm' | 'md' | 'lg' | 'xl'> = 'md';
+  const levelClasses = getResponsiveClasses('level', level);
 
   /**
-   * @summary specifies the text color, defaults to 'inherit'
+   * @summary Specifies the font-weight. Defaults to `normal`.
+   */
+  export let weight: 'normal' | 'medium' | 'semibold' | 'bold' = 'normal';
+
+  /**
+   * @summary Specifies the text color. Defaults to `inherit`.
    */
   export let color: 'base' | 'weak' | 'primary' | undefined = undefined;
 
-  const classes = cn(
+  const classes = clsx(
+    'typography',
     {
-      [`typography`]: true,
-      [`typography--${level}`]: level,
-      [`typography--${color}`]: color
+      [`typography--${color}`]: color,
+      [`typography--${weight}`]: weight
     },
+    levelClasses,
     $$props.class
   );
 </script>
@@ -27,26 +35,45 @@
 
 <style lang="scss">
   .typography {
+    --typography-font-size--xs: var(--font-size--xs);
+    --typography-line-height--xs: var(--line-height--xs);
+    --typography-font-size--sm: var(--font-size--sm);
+    --typography-line-height--sm: var(--line-height--sm);
+    --typography-font-size--md: var(--font-size--md);
+    --typography-line-height--md: var(--line-height--md);
+    --typography-font-size--lg: var(--font-size--lg);
+    --typography-line-height--lg: var(--line-height--lg);
+    --typography-font-size--xl: var(--font-size--xl);
+    --typography-line-height--xl: var(--line-height--xl);
+
     display: block;
     color: inherit;
+    font-size: var(--typography-font-size);
+    line-height: var(--typography-line-height);
+    color: var(--typography-color);
+    font-weight: var(--typography-font-weight);
 
     // color
     &--base {
-      color: var(--text-color--base);
+      --typography-color: var(--text-color--base);
     }
     &--weak {
-      color: var(--text-color--weak);
+      --typography-color: var(--text-color--weak);
     }
     &--primary {
-      color: var(--text-color--primary);
+      --typography-color: var(--text-color--primary);
     }
 
-    @each $level in ('sm', 'md', 'lg') {
-      &--#{$level} {
-        font-size: var(--typography-font-size--#{$level});
-        line-height: var(--typography-line-height--#{$level});
-        letter-spacing: var(--typography-letter-spacing--#{$level});
+    @each $weight in ('normal', 'medium', 'semibold', 'bold') {
+      &--#{$weight} {
+        --typography-font-weight: var(--font-weight--#{$weight});
       }
     }
+  }
+
+  $typography-level-map: ('xs', 'sm', 'md', 'lg', 'xl', '2xl');
+  @include make-responsive-classes('level', $typography-level-map) using ($typography-level) {
+    --typography-font-size: var(--typography-font-size--#{$typography-level});
+    --typography-line-height: var(--typography-line-height--#{$typography-level});
   }
 </style>

@@ -23,9 +23,9 @@
 
 <Section>
   <Container class="space-y-4">
-    <Heading color="primary" level={{ base: 'md', md: '2xl' }}>Okay bro.</Heading>
-    <!-- <Heading color="base" level={2}>Okay bro.</Heading> -->
-    <!-- <Heading color="primary" level={3}>Okay bro.</Heading> -->
+    <Heading color="primary" level={{ base: 'lg', md: '2xl' }}>Okay bro.</Heading>
+    <Heading color="primary" level={{ base: 'md', md: 'xl' }}>Okay bro.</Heading>
+    <Heading color="primary" level={{ base: 'sm', md: 'lg' }}>Okay bro.</Heading>
 
     <Typography color="weak" level="lg">Okay bro.</Typography>
     <Typography color="weak" level="md">Okay bro.</Typography>
@@ -65,22 +65,22 @@
     <AvatarContainer>
       <Avatar size="sm">OR</Avatar>
       <div>
-        <Typography class="font-semibold">Olivia Rhye</Typography>
-        <Typography color="weak">olivia@untitledui.com</Typography>
+        <Typography level="sm" weight="semibold">Olivia Rhye</Typography>
+        <Typography level="sm" color="weak">olivia@untitledui.com</Typography>
       </div>
     </AvatarContainer>
     <AvatarContainer>
       <Avatar size="md"><UserIcon /></Avatar>
       <div>
-        <Typography class="font-semibold">Olivia Rhye</Typography>
-        <Typography color="weak">olivia@untitledui.com</Typography>
+        <Typography level="md" weight="semibold">Olivia Rhye</Typography>
+        <Typography level="md" color="weak">olivia@untitledui.com</Typography>
       </div>
     </AvatarContainer>
     <AvatarContainer>
       <Avatar size="lg" src="http://placekitten.com/300/500/" />
       <div>
-        <Typography class="font-semibold">Olivia Rhye</Typography>
-        <Typography color="weak">olivia@untitledui.com</Typography>
+        <Typography level="lg" weight="semibold">Olivia Rhye</Typography>
+        <Typography level="lg" color="weak">olivia@untitledui.com</Typography>
       </div>
     </AvatarContainer>
 
