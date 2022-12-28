@@ -14,6 +14,7 @@
   import { UserIcon } from 'svelte-feather-icons';
   import AvatarContainer from '@components/avatar/AvatarContainer.svelte';
   import AvatarGroup from '@components/avatar/AvatarGroup.svelte';
+  import Badge from '@components/badge/Badge.svelte';
 </script>
 
 <svelte:head>
@@ -38,9 +39,9 @@
     <Card texture="Bubbles">
       <CardSection>
         <Typography color="weak">Wallet balance</Typography>
-        <!-- <Heading class="mt-2" level={3}>
+        <Heading class="mt-2" level="sm">
           {formatNumberAsCurrency(5684.6)}
-        </Heading> -->
+        </Heading>
       </CardSection>
 
       <CardSection class="pt-0">
@@ -90,5 +91,14 @@
       <Avatar src="http://placekitten.com/96/96/" />
       <Avatar>+5</Avatar>
     </AvatarGroup>
+  </Container>
+</Section>
+
+<Section>
+  <Container>
+    <Badge indicator="ring" palette="base">Inactive</Badge>
+    <Badge indicator="dot" palette="primary">Active</Badge>
+    <Badge indicator="up" palette="success">29.6%</Badge>
+    <Badge indicator="down" palette="danger">18.8%</Badge>
   </Container>
 </Section>
