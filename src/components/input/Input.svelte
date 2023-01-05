@@ -19,22 +19,8 @@
     background: var(--input-bg);
     border: 1px solid var(--input-border-color);
 
-    --input-bg: white;
-    --input-border-color: var(--base-300);
-    --input-border-color--focus: var(--primary-300);
-    --input-border-color--invalid: var(--danger-300);
-
-    --input-dark-bg: var(--base-900);
-    --input-dark-border-color: var(--base-600);
-    --input-dark-border-color--focus: var(--primary-600);
-    --input-dark-border-color--invalid: var(--danger-600);
-
     @include dark {
       color: var(--base-50);
-
-      --input-bg: var(--input-dark-bg);
-      --input-border-color: var(--input-dark-border-color);
-      --input-border-color--invalid: var(--input-dark-border-color--invalid);
     }
 
     &:not([aria-invalid='true']) {
@@ -58,8 +44,7 @@
 
     &:disabled {
       opacity: 0.6;
-      --input-bg: var(--base-100);
-      --input-dark-bg: var(--base-800);
+      --input-bg: var(--input-bg--disabled);
     }
   }
 </style>

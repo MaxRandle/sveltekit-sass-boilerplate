@@ -6,7 +6,7 @@
 /* Theme is directly accessible in the app and the variables may be programmatically reassigned */
 
 /* ========================================================================= */
-/* media query mixins */
+/* theme colors */
 /* ========================================================================= */
 
 :root {
@@ -22,6 +22,8 @@
   --base-800: var(--slate-800);
   --base-900: var(--slate-900);
 
+  --base-hsl-600: var(--slate-hsl-600);
+
   --primary-25: var(--purple-25);
   --primary-50: var(--purple-50);
   --primary-100: var(--purple-100);
@@ -34,6 +36,8 @@
   --primary-800: var(--purple-800);
   --primary-900: var(--purple-900);
 
+  --primary-hsl-600: var(--purple-hsl-600);
+
   --danger-25: var(--red-25);
   --danger-50: var(--red-50);
   --danger-100: var(--red-100);
@@ -45,6 +49,8 @@
   --danger-700: var(--red-700);
   --danger-800: var(--red-800);
   --danger-900: var(--red-900);
+
+  --danger-hsl-600: var(--red-hsl-600);
 
   --warning-25: var(--amber-25);
   --warning-50: var(--amber-50);
@@ -137,18 +143,44 @@
   }
 
   /* ========================================================================= */
+  /* input */
+  /* ========================================================================= */
+
+  --input-bg: white;
+  --input-bg--disabled: var(--base-100);
+
+  --input-color: var(--base-900);
+  --input-placeholder-color: var(--base-500);
+
+  --input-border-color: var(--base-300);
+  --input-border-color--focus: var(--primary-300);
+  --input-border-color--invalid: var(--danger-300);
+
+  @include dark {
+    --input-bg: var(--base-900);
+    --input-bg--disabled: var(--base-800);
+
+    --input-color: var(--base-50);
+    --input-placeholder-color: var(--base-500);
+
+    --input-border-color: var(--base-600);
+    --input-border-color--focus: var(--primary-600);
+    --input-border-color--invalid: var(--danger-600);
+  }
+
+  /* ========================================================================= */
   /* misc */
   /* ========================================================================= */
 
   --border-radius--surface: 16px;
 
-  --focus-outline--base: 4px solid var(--base-100);
-  --focus-outline--primary: 4px solid var(--primary-100);
-  --focus-outline--danger: 4px solid var(--danger-100);
+  --focus-outline--base: 4px solid hsla(var(--base-hsl-600), 0.1);
+  --focus-outline--primary: 4px solid hsla(var(--primary-hsl-600), 0.1);
+  --focus-outline--danger: 4px solid hsla(var(--danger-hsl-600), 0.1);
 
   @include dark {
-    --focus-outline--base: 4px solid var(--base-700);
-    --focus-outline--primary: 4px solid var(--primary-900);
-    --focus-outline--danger: 4px solid var(--danger-900);
+    --focus-outline--base: 4px solid hsla(var(--base-hsl-600), 0.25);
+    --focus-outline--primary: 4px solid hsla(var(--primary-hsl-600), 0.25);
+    --focus-outline--danger: 4px solid hsla(var(--danger-hsl-600), 0.25);
   }
 }
