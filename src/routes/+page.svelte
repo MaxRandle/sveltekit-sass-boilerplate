@@ -11,11 +11,13 @@
   import ButtonDanger from '@components/button/ButtonDanger.svelte';
   import ButtonGroup from '@components/button/ButtonGroup.svelte';
   import Avatar from '@components/avatar/Avatar.svelte';
-  import { UserIcon } from 'svelte-feather-icons';
+  import { ArrowLeftIcon, ArrowRightIcon, PlusIcon, UserIcon } from 'svelte-feather-icons';
   import AvatarContainer from '@components/avatar/AvatarContainer.svelte';
   import AvatarGroup from '@components/avatar/AvatarGroup.svelte';
   import Badge from '@components/badge/Badge.svelte';
   import Input from '@components/input/Input.svelte';
+  import InputGroup from '@components/input/InputGroup.svelte';
+  import InputAdornment from '@components/input/InputAdornment.svelte';
 </script>
 
 <svelte:head>
@@ -53,9 +55,10 @@
 
       <CardSection class="pt-0">
         <ButtonGroup>
+          <Button><ArrowLeftIcon /></Button>
+          <Button><PlusIcon /></Button>
           <Button>ABC</Button>
-          <Button>ABC</Button>
-          <Button>ABC</Button>
+          <Button><ArrowRightIcon /></Button>
         </ButtonGroup>
       </CardSection>
     </Card>
@@ -99,8 +102,8 @@
   <Container>
     <Badge indicator="ring" palette="base">Inactive</Badge>
     <Badge indicator="dot" palette="primary">Active</Badge>
-    <Badge indicator="up" palette="success">29.6%</Badge>
-    <Badge indicator="down" palette="danger">18.8%</Badge>
+    <Badge indicator="up" palette="success">+29.6%</Badge>
+    <Badge indicator="down" palette="danger">-18.8%</Badge>
   </Container>
 </Section>
 
@@ -109,5 +112,10 @@
     <Input placeholder="example@email.com" />
     <Input disabled placeholder="example@email.com" />
     <Input aria-invalid placeholder="example@email.com" />
+
+    <InputGroup>
+      <InputAdornment>https://</InputAdornment>
+      <Input placeholder="example.com" />
+    </InputGroup>
   </Container>
 </Section>

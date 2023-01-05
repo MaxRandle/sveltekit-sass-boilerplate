@@ -149,8 +149,8 @@
   --input-bg: white;
   --input-bg--disabled: var(--base-100);
 
-  --input-color: var(--base-900);
-  --input-placeholder-color: var(--base-500);
+  --input-color: var(--text-color--base);
+  --input-placeholder-color: var(--text-color--weak);
 
   --input-border-color: var(--base-300);
   --input-border-color--focus: var(--primary-300);
@@ -159,9 +159,6 @@
   @include dark {
     --input-bg: var(--base-900);
     --input-bg--disabled: var(--base-800);
-
-    --input-color: var(--base-50);
-    --input-placeholder-color: var(--base-500);
 
     --input-border-color: var(--base-600);
     --input-border-color--focus: var(--primary-600);
