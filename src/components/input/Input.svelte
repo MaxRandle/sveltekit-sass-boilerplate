@@ -4,14 +4,22 @@
 
   const group = getInputGroupContext();
 
-  const classes = clsx('input', group && 'group', $$props.class);
+  /**
+   * @summary specifies whether the input should take up all available horizontal space.
+   */
+  export let fullWidth: boolean | undefined = undefined;
+
+  const classes = clsx('input', group && 'group', fullWidth && 'full-width', $$props.class);
 </script>
 
 <input class={classes} {...$$restProps} />
 
 <style lang="scss">
   .input {
-    width: 100%;
+    &.full-width {
+      width: 100%;
+    }
+
     appearance: none;
     padding: 0.625rem 0.875rem;
     border-radius: 0.5rem;

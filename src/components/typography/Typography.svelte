@@ -16,7 +16,7 @@
   /**
    * @summary Specifies the text color. Defaults to `inherit`.
    */
-  export let color: 'base' | 'weak' | 'primary' | undefined = undefined;
+  export let color: 'base' | 'weak' | 'primary' | 'danger' | undefined = undefined;
 
   const classes = clsx(
     'typography',
@@ -62,6 +62,9 @@
     }
     &--primary {
       --typography-color: var(--text-color--primary);
+    }
+    &--danger {
+      --typography-color: var(--text-color--danger);
     }
 
     @each $weight in ('normal', 'medium', 'semibold', 'bold') {

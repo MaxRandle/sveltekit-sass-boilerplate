@@ -13,8 +13,5 @@
 <style lang="scss">
   .input-group {
     display: flex;
-    &:global(> * + *) {
-      margin-left: -1px;
-    }
   }
 </style>

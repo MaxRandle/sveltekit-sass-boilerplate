@@ -18,6 +18,7 @@
   import Input from '@components/input/Input.svelte';
   import InputGroup from '@components/input/InputGroup.svelte';
   import InputAdornment from '@components/input/InputAdornment.svelte';
+  import FormField from '@components/form/FormField.svelte';
 </script>
 
 <svelte:head>
@@ -108,7 +109,7 @@
 </Section>
 
 <Section>
-  <Container class="space-y-2">
+  <Container class="space-y-4">
     <Input placeholder="example@email.com" />
     <Input disabled placeholder="example@email.com" />
     <Input aria-invalid placeholder="example@email.com" />
@@ -117,5 +118,12 @@
       <InputAdornment>https://</InputAdornment>
       <Input placeholder="example.com" />
     </InputGroup>
+
+    <FormField label="Height" helper="Enter your height in cm" error="This field is required">
+      <InputGroup>
+        <Input placeholder="175" aria-invalid />
+        <InputAdornment>cm</InputAdornment>
+      </InputGroup>
+    </FormField>
   </Container>
 </Section>

@@ -83,11 +83,13 @@
   --text-color--base: var(--base-900);
   --text-color--weak: var(--base-500);
   --text-color--primary: var(--primary-600);
+  --text-color--danger: var(--danger-600);
 
   @include dark {
     --text-color--base: var(--base-50);
     --text-color--weak: var(--base-400);
     --text-color--primary: var(--primary-300);
+    --text-color--danger: var(--danger-300);
   }
 
   /* ========================================================================= */
