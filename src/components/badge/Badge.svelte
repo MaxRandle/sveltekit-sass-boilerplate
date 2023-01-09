@@ -41,6 +41,7 @@
     align-items: center;
     font-weight: var(--font-weight--medium);
     border-radius: 99999px;
+    border: 1px solid var(--badge-border-color);
 
     font-size: var(--badge-font-size);
     padding: var(--badge-padding);
@@ -56,40 +57,48 @@
       --badge-color: var(--base-700);
       --badge-bg: var(--base-100);
       --badge-indicator-bg: var(--base-500);
+      --badge-border-color: var(--base-300);
       @include dark {
         --badge-color: var(--base-100);
         --badge-bg: var(--base-700);
         --badge-indicator-bg: var(--base-200);
+        --badge-border-color: var(--base-700);
       }
     }
     &--primary {
       --badge-color: var(--primary-700);
       --badge-bg: var(--primary-50);
       --badge-indicator-bg: var(--primary-500);
+      --badge-border-color: var(--primary-100);
       @include dark {
         --badge-color: var(--primary-50);
         --badge-bg: var(--primary-700);
         --badge-indicator-bg: var(--primary-200);
+        --badge-border-color: var(--primary-700);
       }
     }
     &--success {
       --badge-color: var(--success-700);
       --badge-bg: var(--success-50);
       --badge-indicator-bg: var(--success-500);
+      --badge-border-color: var(--success-100);
       @include dark {
         --badge-color: var(--success-50);
         --badge-bg: var(--success-700);
         --badge-indicator-bg: var(--success-200);
+        --badge-border-color: var(--success-700);
       }
     }
     &--danger {
       --badge-color: var(--danger-700);
       --badge-bg: var(--danger-50);
       --badge-indicator-bg: var(--danger-500);
+      --badge-border-color: var(--danger-100);
       @include dark {
         --badge-color: var(--danger-50);
         --badge-bg: var(--danger-700);
         --badge-indicator-bg: var(--danger-200);
+        --badge-border-color: var(--danger-700);
       }
     }
 

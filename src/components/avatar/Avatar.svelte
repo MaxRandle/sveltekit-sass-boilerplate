@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { getResponsiveClasses, type ResponsiveProp } from '@helpers/components';
   import clsx from 'clsx';
   import { getAvatarContainerContext, getAvatarGroupContext } from './@types';
 
@@ -18,15 +19,14 @@
   /**
    * @summary Determines the size of the avatar, and text/icon children. Defaults to `md`.
    */
-  export let size: 'sm' | 'md' | 'lg' = 'md';
+  export let size: ResponsiveProp<'sm' | 'md' | 'lg'> = 'md';
+  const sizeClasses = getResponsiveClasses('size', size);
 
   const classes = clsx(
     'avatar',
     container && 'has-container',
     group && 'has-group',
-    {
-      [`avatar--${size}`]: true
-    },
+    sizeClasses,
     $$props.class
   );
 </script>
@@ -40,46 +40,44 @@
 
 <style lang="scss">
   .avatar {
+    --avatar-size--sm: 2.5rem;
+    --avatar-icon-size--sm: 1.5rem;
+    --avatar-font-size--sm: var(--font-size--md);
+    --avatar-container-margin--sm: 0.75rem;
+
+    --avatar-size--md: 3rem;
+    --avatar-icon-size--md: 1.75rem;
+    --avatar-font-size--md: var(--font-size--lg);
+    --avatar-container-margin--md: 0.75rem;
+
+    --avatar-size--lg: 3.5rem;
+    --avatar-icon-size--lg: 2rem;
+    --avatar-font-size--lg: var(--font-size--xl);
+    --avatar-container-margin--lg: 1rem;
+
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 99999px;
     overflow: hidden;
+    flex-shrink: 0;
 
     color: var(--primary-600);
     background-color: var(--primary-50);
     letter-spacing: 0.025em;
     font-weight: (--font-weight--medium);
 
-    &--sm {
-      font-size: var(--font-size--md);
-      --avatar-icon-size: 1.5rem;
-      --container-margin: 0.75rem;
-      width: 2.5rem;
-      height: 2.5rem;
-    }
-    &--md {
-      font-size: var(--font-size--lg);
-      --avatar-icon-size: 1.75rem;
-      --container-margin: 0.75rem;
-      width: 3rem;
-      height: 3rem;
-    }
-    &--lg {
-      font-size: var(--font-size--xl);
-      --avatar-icon-size: 2rem;
-      --container-margin: 1rem;
-      width: 3.5rem;
-      height: 3.5rem;
-    }
+    font-size: var(--avatar-font-size);
+    width: var(--avatar-size);
+    height: var(--avatar-size);
 
     & > img {
       object-fit: cover;
     }
 
     &.has-container {
-      margin-right: var(--container-margin);
+      margin-right: var(--avatar-container-margin);
     }
 
     &.has-group {
@@ -96,5 +94,13 @@
     display: block;
     width: var(--avatar-icon-size);
     height: var(--avatar-icon-size);
+  }
+
+  $avatar-size-map: ('sm', 'md', 'lg');
+  @include make-responsive-classes('size', $avatar-size-map) using ($avatar-size) {
+    --avatar-size: var(--avatar-size--#{$avatar-size});
+    --avatar-icon-size: var(--avatar-icon-size--#{$avatar-size});
+    --avatar-font-size: var(--avatar-font-size--#{$avatar-size});
+    --avatar-container-margin: var(--avatar-container-margin--#{$avatar-size});
   }
 </style>

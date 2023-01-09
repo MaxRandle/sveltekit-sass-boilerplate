@@ -14,6 +14,5 @@
 <style lang="scss">
   .avatar-container {
     display: flex;
-    align-items: center;
   }
 </style>

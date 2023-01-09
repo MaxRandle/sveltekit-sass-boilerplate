@@ -17,7 +17,7 @@ const SECURITIES: Security[] = [
     ticker: 'AAPL',
     marketCap: 2.208e12,
     exchange: 'NASDAQ',
-    logoUrl: 'https://www.example.com/logos/apple.png',
+    logoUrl: 'https://logo.clearbit.com/apple.com',
     change24h: 2.5
   },
   {
@@ -26,7 +26,7 @@ const SECURITIES: Security[] = [
     ticker: 'MSFT',
     marketCap: 2.375e12,
     exchange: 'NASDAQ',
-    logoUrl: 'https://www.example.com/logos/microsoft.png',
+    logoUrl: 'https://logo.clearbit.com/microsoft.com',
     change24h: -1.3
   },
   {
@@ -35,7 +35,7 @@ const SECURITIES: Security[] = [
     ticker: 'GOOGL',
     marketCap: 2.064e12,
     exchange: 'NASDAQ',
-    logoUrl: 'https://www.example.com/logos/alphabet.png',
+    logoUrl: 'https://logo.clearbit.com/alphabet.com',
     change24h: 3.8
   },
   {
@@ -44,17 +44,8 @@ const SECURITIES: Security[] = [
     ticker: 'AMZN',
     marketCap: 2.016e12,
     exchange: 'NASDAQ',
-    logoUrl: 'https://www.example.com/logos/amazon.png',
+    logoUrl: 'https://logo.clearbit.com/amazon.com',
     change24h: 1.9
-  },
-  {
-    name: 'Berkshire Hathaway Inc.',
-    sharePrice: 565259.87,
-    ticker: 'BRK.A',
-    marketCap: 1.9e12,
-    exchange: 'NYSE',
-    logoUrl: 'https://www.example.com/logos/berkshire-hathaway.png',
-    change24h: -2.4
   },
   {
     name: 'Facebook, Inc.',
@@ -62,7 +53,7 @@ const SECURITIES: Security[] = [
     ticker: 'FB',
     marketCap: 1.376e12,
     exchange: 'NASDAQ',
-    logoUrl: 'https://www.example.com/logos/facebook.png',
+    logoUrl: 'https://logo.clearbit.com/facebook.com',
     change24h: -1.7
   },
   {
@@ -71,7 +62,7 @@ const SECURITIES: Security[] = [
     ticker: 'TSLA',
     marketCap: 1.259e12,
     exchange: 'NASDAQ',
-    logoUrl: 'https://www.example.com/logos/tesla.png',
+    logoUrl: 'https://logo.clearbit.com/tesla.com',
     change24h: 3.4
   },
   {
@@ -80,7 +71,7 @@ const SECURITIES: Security[] = [
     ticker: 'BABA',
     marketCap: 1.162e12,
     exchange: 'NYSE',
-    logoUrl: 'https://www.example.com/logos/alibaba.png',
+    logoUrl: 'https://logo.clearbit.com/alibaba.com',
     change24h: -1.2
   },
   {
@@ -89,7 +80,7 @@ const SECURITIES: Security[] = [
     ticker: 'JNJ',
     marketCap: 4.154e11,
     exchange: 'NYSE',
-    logoUrl: 'https://www.example.com/logos/johnson-and-johnson.png',
+    logoUrl: 'https://logo.clearbit.com/johnson-and-johnson.com',
     change24h: 0.9
   },
   {
@@ -98,8 +89,17 @@ const SECURITIES: Security[] = [
     ticker: 'PG',
     marketCap: 330.9e11,
     exchange: 'NYSE',
-    logoUrl: 'https://www.example.com/logos/procter-and-gamble.png',
+    logoUrl: 'https://logo.clearbit.com/pg.com',
     change24h: -0.6
+  },
+  {
+    name: 'Coca-Cola Co.',
+    sharePrice: 53.04,
+    ticker: 'KO',
+    marketCap: 236.3e11,
+    exchange: 'NYSE',
+    logoUrl: 'https://logo.clearbit.com/coca-cola.com',
+    change24h: -0.4
   }
 ];
 
