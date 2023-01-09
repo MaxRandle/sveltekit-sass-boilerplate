@@ -102,7 +102,7 @@
   <Container>
     <Badge indicator="ring" palette="base">Inactive</Badge>
     <Badge indicator="dot" palette="primary">Active</Badge>
-    <Badge indicator="up" palette="success">+29.6%</Badge>
+    <Badge indicator="up" palette="success">29.6%</Badge>
     <Badge indicator="down" palette="danger">-18.8%</Badge>
   </Container>
 </Section>
