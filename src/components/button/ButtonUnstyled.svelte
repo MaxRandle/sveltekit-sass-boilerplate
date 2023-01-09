@@ -9,6 +9,11 @@
    */
   export let size: 'sm' | 'md' | 'lg' = 'md';
 
+  /**
+   * @summary Internal or external link. This causes the button to be an anchor tag.
+   */
+  export let href: string | undefined = undefined;
+
   const classes = clsx(
     'button',
     group && 'group',
@@ -17,20 +22,23 @@
     },
     $$props.class
   );
+
+  const elementType = href ? 'a' : 'button';
 </script>
 
-<button class={classes} on:click>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<svelte:element this={elementType} class={classes} {href} on:click>
   <slot />
-</button>
+</svelte:element>
 
 <style lang="scss">
   .button {
-    --button-color: var(--color);
+    --button-color: var(--color, currentColor);
     --button-color--hover: var(--color--hover);
     --button-bg: var(--bg);
     --button-bg--hover: var(--bg--hover);
-    --button-border-color: var(--border-color);
-    --button-border-color--hover: var(--border-color--hover);
+    --button-border-color: var(--border-color, transparent);
+    --button-border-color--hover: var(--border-color--hover, transparent);
 
     --button-padding--sm: 0.5rem 0.875rem;
     --button-padding--md: 0.625rem 1rem;
@@ -42,6 +50,9 @@
     color: var(--button-color);
     background-color: var(--button-bg);
     border-color: var(--button-border-color);
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
     letter-spacing: 0.04em;
     border-width: 1px;
     border-style: solid;
