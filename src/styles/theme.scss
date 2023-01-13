@@ -98,6 +98,7 @@
 
   --surface-bg--base: white;
   --surface-bg--base-raised: var(--base-100);
+  --surface-bg--base-overlay: hsla(var(--base-hsl-600), 0.05);
 
   --surface-bg--primary: var(--primary-50);
   --surface-bg--primary-raised: var(--primary-100);
@@ -110,6 +111,7 @@
   @include dark {
     --surface-bg--base: var(--base-900);
     --surface-bg--base-raised: var(--base-800);
+    --surface-bg--base-overlay: hsla(var(--base-hsl-600), 0.25);
 
     --surface-bg--primary: var(--primary-900);
     --surface-bg--primary-raised: var(--primary-800);

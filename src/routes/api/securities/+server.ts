@@ -1,8 +1,9 @@
 import type { RequestHandler } from './$types';
 
 export type Security = {
+  id: string;
   name: string;
-  sharePrice: number;
+  sharePriceInCents: number;
   ticker: string;
   marketCap: number;
   exchange: string;
@@ -12,8 +13,9 @@ export type Security = {
 
 const SECURITIES: Security[] = [
   {
+    id: '1',
     name: 'Apple Inc.',
-    sharePrice: 107.42,
+    sharePriceInCents: 10742,
     ticker: 'AAPL',
     marketCap: 2.208e12,
     exchange: 'NASDAQ',
@@ -21,8 +23,9 @@ const SECURITIES: Security[] = [
     change24h: 2.5
   },
   {
+    id: '2',
     name: 'Microsoft Corporation',
-    sharePrice: 231.77,
+    sharePriceInCents: 23177,
     ticker: 'MSFT',
     marketCap: 2.375e12,
     exchange: 'NASDAQ',
@@ -30,8 +33,9 @@ const SECURITIES: Security[] = [
     change24h: -1.3
   },
   {
+    id: '3',
     name: 'Alphabet Inc.',
-    sharePrice: 2103.1,
+    sharePriceInCents: 210310,
     ticker: 'GOOGL',
     marketCap: 2.064e12,
     exchange: 'NASDAQ',
@@ -39,8 +43,9 @@ const SECURITIES: Security[] = [
     change24h: 3.8
   },
   {
+    id: '4',
     name: 'Amazon.com, Inc.',
-    sharePrice: 3276.87,
+    sharePriceInCents: 327687,
     ticker: 'AMZN',
     marketCap: 2.016e12,
     exchange: 'NASDAQ',
@@ -48,8 +53,9 @@ const SECURITIES: Security[] = [
     change24h: 1.9
   },
   {
+    id: '5',
     name: 'Facebook, Inc.',
-    sharePrice: 307.91,
+    sharePriceInCents: 30791,
     ticker: 'FB',
     marketCap: 1.376e12,
     exchange: 'NASDAQ',
@@ -57,8 +63,9 @@ const SECURITIES: Security[] = [
     change24h: -1.7
   },
   {
+    id: '6',
     name: 'Tesla, Inc.',
-    sharePrice: 744.92,
+    sharePriceInCents: 74492,
     ticker: 'TSLA',
     marketCap: 1.259e12,
     exchange: 'NASDAQ',
@@ -66,8 +73,9 @@ const SECURITIES: Security[] = [
     change24h: 3.4
   },
   {
+    id: '7',
     name: 'Alibaba Group Holding Limited',
-    sharePrice: 287.29,
+    sharePriceInCents: 28729,
     ticker: 'BABA',
     marketCap: 1.162e12,
     exchange: 'NYSE',
@@ -75,8 +83,9 @@ const SECURITIES: Security[] = [
     change24h: -1.2
   },
   {
+    id: '8',
     name: 'Johnson & Johnson',
-    sharePrice: 170.01,
+    sharePriceInCents: 17001,
     ticker: 'JNJ',
     marketCap: 4.154e11,
     exchange: 'NYSE',
@@ -84,8 +93,9 @@ const SECURITIES: Security[] = [
     change24h: 0.9
   },
   {
+    id: '9',
     name: 'Procter & Gamble Co.',
-    sharePrice: 119.8,
+    sharePriceInCents: 11980,
     ticker: 'PG',
     marketCap: 330.9e11,
     exchange: 'NYSE',
@@ -93,8 +103,9 @@ const SECURITIES: Security[] = [
     change24h: -0.6
   },
   {
+    id: '10',
     name: 'Coca-Cola Co.',
-    sharePrice: 53.04,
+    sharePriceInCents: 5304,
     ticker: 'KO',
     marketCap: 236.3e11,
     exchange: 'NYSE',
@@ -103,8 +114,12 @@ const SECURITIES: Security[] = [
   }
 ];
 
+export type SecuritiesResponse = {
+  securities: Security[];
+};
+
 export const GET = (() => {
-  const payload = { securities: SECURITIES };
+  const payload: SecuritiesResponse = { securities: SECURITIES };
 
   return new Response(JSON.stringify(payload));
 }) satisfies RequestHandler;

@@ -44,7 +44,7 @@
               {security.change24h}%
             </Badge>
             <Typography weight="medium" level={{ base: 'sm', sm: 'md' }}>
-              {formatNumberAsCurrency(security.sharePrice)}
+              {formatNumberAsCurrency(security.sharePriceInCents / 100)}
             </Typography>
           </div>
         </CardSection>

@@ -14,3 +14,10 @@ export const formatLargeNumberAsCurrency = (number: number): string =>
     notation: 'compact',
     compactDisplay: 'long'
   }).format(number);
+
+export const formatNumberAsPercentage = (number: number) =>
+  new Intl.NumberFormat('default', {
+    style: 'percent',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).format(number / 100);
