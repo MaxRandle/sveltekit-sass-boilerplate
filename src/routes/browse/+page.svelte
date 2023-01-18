@@ -35,6 +35,56 @@
   const setCurrentSecurity = (security: Security) => {
     currentSecurity = security;
   };
+
+  $: securityData = currentSecurity
+    ? [
+        {
+          label: 'market cap',
+          value: formatLargeNumberAsCurrency(currentSecurity?.marketCap),
+          type: 'text'
+        },
+        {
+          label: 'share price',
+          value: formatNumberAsCurrency(currentSecurity?.sharePriceInCents / 100),
+          type: 'text'
+        },
+        {
+          label: '24hr change',
+          value: currentSecurity?.change24h,
+          type: 'badge'
+        },
+        {
+          label: 'exchange',
+          value: currentSecurity?.exchange,
+          type: 'text'
+        },
+        {
+          label: '52 week high',
+          value: formatNumberAsCurrency(currentSecurity?.high52WeekInCents / 100),
+          type: 'text'
+        },
+        {
+          label: '52 week low',
+          value: formatNumberAsCurrency(currentSecurity?.low52WeekInCents / 100),
+          type: 'text'
+        },
+        {
+          label: 'p/e ratio',
+          value: currentSecurity?.peRatio,
+          type: 'text'
+        },
+        {
+          label: '24hr volume',
+          value: formatLargeNumber(currentSecurity?.volume24h),
+          type: 'text'
+        },
+        {
+          label: 'dividend yield',
+          value: formatNumberAsPercentage(currentSecurity?.dividendYield),
+          type: 'text'
+        }
+      ]
+    : [];
 </script>
 
 <Modal open={modalOpen} onClose={closeModal}>
@@ -58,99 +108,27 @@
         </AvatarContainer>
 
         <Table class="mt-4">
-          <Tr>
-            <Td>
-              <Typography level={{ base: 'sm', sm: 'md' }}>market cap</Typography>
-            </Td>
-            <Td class="text-right">
-              <Typography level={{ base: 'sm', sm: 'md' }}>
-                {formatLargeNumberAsCurrency(currentSecurity.marketCap)}
-              </Typography>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>
-              <Typography level={{ base: 'sm', sm: 'md' }}>share price</Typography>
-            </Td>
-            <Td class="text-right">
-              <Typography level={{ base: 'sm', sm: 'md' }}>
-                {formatNumberAsCurrency(currentSecurity.sharePriceInCents / 100)}
-              </Typography>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>
-              <Typography level={{ base: 'sm', sm: 'md' }}>24hr change</Typography>
-            </Td>
-            <Td class="text-right">
-              <Badge
-                palette={currentSecurity.change24h > 0 ? 'success' : 'danger'}
-                indicator={currentSecurity.change24h > 0 ? 'up' : 'down'}
-              >
-                {currentSecurity.change24h}%
-              </Badge>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>
-              <Typography level={{ base: 'sm', sm: 'md' }}>exchange</Typography>
-            </Td>
-            <Td class="text-right">
-              <Typography level={{ base: 'sm', sm: 'md' }}>
-                {currentSecurity.exchange}
-              </Typography>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>
-              <Typography level={{ base: 'sm', sm: 'md' }}>52 week high</Typography>
-            </Td>
-            <Td class="text-right">
-              <Typography level={{ base: 'sm', sm: 'md' }}>
-                {formatNumberAsCurrency(currentSecurity.high52WeekInCents / 100)}
-              </Typography>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>
-              <Typography level={{ base: 'sm', sm: 'md' }}>52 week low</Typography>
-            </Td>
-            <Td class="text-right">
-              <Typography level={{ base: 'sm', sm: 'md' }}>
-                {formatNumberAsCurrency(currentSecurity.low52WeekInCents / 100)}
-              </Typography>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>
-              <Typography level={{ base: 'sm', sm: 'md' }}>p/e ratio</Typography>
-            </Td>
-            <Td class="text-right">
-              <Typography level={{ base: 'sm', sm: 'md' }}>
-                {currentSecurity.peRatio}
-              </Typography>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>
-              <Typography level={{ base: 'sm', sm: 'md' }}>24hr volume</Typography>
-            </Td>
-            <Td class="text-right">
-              <Typography level={{ base: 'sm', sm: 'md' }}>
-                {formatLargeNumber(currentSecurity.volume24h)}
-              </Typography>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>
-              <Typography level={{ base: 'sm', sm: 'md' }}>dividend yield</Typography>
-            </Td>
-            <Td class="text-right">
-              <Typography level={{ base: 'sm', sm: 'md' }}>
-                {formatNumberAsPercentage(currentSecurity.dividendYield)}
-              </Typography>
-            </Td>
-          </Tr>
+          {#each securityData as row}
+            <Tr>
+              <Td>
+                <Typography level={{ base: 'sm', sm: 'md' }}>{row.label}</Typography>
+              </Td>
+              <Td class="text-right">
+                {#if row.type === 'text'}
+                  <Typography level={{ base: 'sm', sm: 'md' }}>
+                    {row.value}
+                  </Typography>
+                {:else if row.type === 'badge'}
+                  <Badge
+                    palette={row.value > 0 ? 'success' : 'danger'}
+                    indicator={row.value > 0 ? 'up' : 'down'}
+                  >
+                    {row.value}%
+                  </Badge>
+                {/if}
+              </Td>
+            </Tr>
+          {/each}
         </Table>
       </CardSection>
     </Card>
