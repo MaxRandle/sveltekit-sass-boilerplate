@@ -80,7 +80,7 @@
           </Tr>
           <Tr>
             <Td>
-              <Typography level={{ base: 'sm', sm: 'md' }}>change 24hr</Typography>
+              <Typography level={{ base: 'sm', sm: 'md' }}>24hr change</Typography>
             </Td>
             <Td class="text-right">
               <Badge
@@ -133,7 +133,7 @@
           </Tr>
           <Tr>
             <Td>
-              <Typography level={{ base: 'sm', sm: 'md' }}>24h volume</Typography>
+              <Typography level={{ base: 'sm', sm: 'md' }}>24hr volume</Typography>
             </Td>
             <Td class="text-right">
               <Typography level={{ base: 'sm', sm: 'md' }}>
@@ -152,8 +152,6 @@
             </Td>
           </Tr>
         </Table>
-
-        <Typography level={{ base: 'sm', sm: 'md' }} color="weak" />
       </CardSection>
     </Card>
   {/if}
@@ -163,7 +161,7 @@
   <Container class="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
     {#each securities as security}
       <Card
-        on:click={() => {
+        click={() => {
           setCurrentSecurity(security);
           openModal();
         }}

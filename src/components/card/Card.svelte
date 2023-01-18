@@ -21,7 +21,7 @@
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<svelte:element this={tag} class="card {cardClass} {$$props.class}" on:click>
+<svelte:element this={tag} class="card {cardClass} {$$props.class}" on:click={click}>
   {#if pattern}
     <Texture {pattern} />
   {/if}
