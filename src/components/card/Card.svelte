@@ -14,17 +14,23 @@
   let pattern: Pattern | undefined = undefined;
   export { pattern as texture };
   const cardClass = `card--bg-${palette}`;
+
+  export let click: ((event: Event) => void) | undefined = undefined;
+
+  let tag = click ? 'button' : 'div';
 </script>
 
-<div class="card {cardClass}">
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<svelte:element this={tag} class="card {cardClass} {$$props.class}" on:click>
   {#if pattern}
     <Texture {pattern} />
   {/if}
   <slot />
-</div>
+</svelte:element>
 
 <style lang="scss">
   .card {
+    text-align: left;
     border-radius: var(--border-radius--surface);
     position: relative;
     overflow: hidden;

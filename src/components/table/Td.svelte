@@ -1,4 +1,4 @@
-<td><slot /></td>
+<td {...$$props}><slot /></td>
 
 <style lang="scss">
   td {
