@@ -8,7 +8,6 @@
   import { formatNumberAsCurrency, formatNumberAsPercentage } from '@helpers/formatNumber';
   import Button from '@components/button/Button.svelte';
   import ButtonPrimary from '@components/button/ButtonPrimary.svelte';
-  import Divider from '@components/divider/Divider.svelte';
   import Badge from '@components/badge/Badge.svelte';
   import Table from '@components/table/Table.svelte';
   import Tr from '@components/table/Tr.svelte';
