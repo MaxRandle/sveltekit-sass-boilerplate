@@ -38,6 +38,8 @@
   },
   "type": "module",
   "dependencies": {
+    "@auth/core": "^0.2.5",
+    "@auth/sveltekit": "^0.1.12",
     "clsx": "^1.2.1",
     "svelte-feather-icons": "^4.0.0"
   }

@@ -128,6 +128,7 @@
 
   --border-color--base: var(--base-300);
   --border-color--base-hover: var(--base-400);
+  --border-color--base-disabled: var(--base-200);
 
   --border-color--primary: var(--primary-400);
   --border-color--danger: var(--danger-400);
@@ -138,6 +139,7 @@
   @include dark {
     --border-color--base: var(--base-600);
     --border-color--base-hover: var(--base-500);
+    --border-color--base-disabled: var(--base-700);
 
     --border-color--primary: var(--primary-400);
     --border-color--danger: var(--danger-400);
